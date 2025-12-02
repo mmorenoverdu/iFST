@@ -10,6 +10,7 @@ This version of the task, as developed by Moreno-Verdú et al. ([preprint](https
 The present repository contains the materials for an open-source version of the iFST for local and online use. Subsequent updates in native software ([PsychoPy](https://www.psychopy.org/)) may need adjustments. As developers, we are not responsible for implementing these in every use case.
 
 An example of the setup is shown below.
+
 ![iFST Animation](iFST_example.gif)
 
 ## Repository information
