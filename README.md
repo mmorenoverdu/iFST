@@ -10,7 +10,7 @@ This version of the task, as developed by Moreno-Verdú et al. ([preprint](https
 The present repository contains the materials for an open-source version of the iFST for local and online use. Subsequent updates in native software ([PsychoPy](https://www.psychopy.org/)) may need adjustments. As developers, we are not responsible for implementing these in every use case.
 
 An example of the setup is shown below.
-[VIDEO]
+![iFST Animation](iFST_example.gif)
 
 ## Repository information
 The repository has 1 main folder, which contain **PsychoPy experiment (.psyexp)** and associated files to be able to run the task **locally or online**. Please consult the Readme file before using the task. This experiment is provided as an hybrid PsychoPy experiment, this means it should work locally and online without adjustments. The Readme file contain extensive documentation on the most relevant task settings and detailed information to allow the user further customization.
