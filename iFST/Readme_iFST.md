@@ -1,15 +1,15 @@
 # Imagined Finger Sequence Task (iFST)
 
-Marcos Moreno Verdu, 02/12/2025
+Marcos Moreno Verdu, 13/01/2026
 
 
-PsychoPy version 2025.1.0
+PsychoPy version 2025.2.4
 
 
 Hybrid Experiment (Local/Online both possible with this experiment)
 
 
-Languages supported: English, Spanish, French. Further languages can be added.
+Languages supported: English, Spanish, French & German. Further languages can be added.
 
 
 ---------------------------------------
@@ -247,3 +247,11 @@ If you are interested in the self-assessments, the relevant variables to retain 
 
 All the variables shown in the dialog box will be saved.
 
+---------------------------------------
+## BASIC DEMOGRAPHIC INFORMATION:
+
+In the dialogue box, two fields will be available for participants to indicate their:
+- Age.
+- Gender. With options: Female, Male, Non-binary, Trans-gender, Other, Prefer not to say.
+
+On the first screen of the experiment, participants will have to choose their "dominant" hand, which corresponds to their laterality. All these variables are saved automatically.
