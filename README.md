@@ -1,5 +1,5 @@
 # Imagined Finger Sequence Task (iFST)
-**Available in English, Spanish, French** (see below to implement the task in other languages)
+**Available in English, Spanish, French & German** (see below to implement the task in other languages)
 
 The iFST is a behavioural paradigm aiming to assess the ability to maintain movement imagery with temporal precision. If you are interested in assessing Movement Imagery ability, visit this [Task Platform Project](https://movementimageryability.github.io/) for an overview of open-source behavioural tasks.
 
