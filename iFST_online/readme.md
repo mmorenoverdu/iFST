@@ -1,8 +1,11 @@
 # IMAGINED FINGER SEQUENCE TASK (iFST)
 
-**Author:** Marcos Moreno Verdu, 18/06/2026  
+**Author:** Marcos Moreno Verdu, 18/06/2026
+
 **Software used:** PsychoPy 2025.2.4 (or superior)
-**Experiment Type:** Hybrid (Local and Online, via [Pavlovia](https://pavlovia.org/))  
+
+**Experiment Type:** Hybrid (Local and Online, via [Pavlovia](https://pavlovia.org/))
+
 **Languages supported:** English (EN) = default, Spanish (ES), French (FR) and German (DE). Further languages can be added with no code changes (see [Language Localisation](#language-localisation)).
 
 ---------------------------------------
