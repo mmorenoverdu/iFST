@@ -1,5 +1,5 @@
 # Imagined Finger Sequence Task (iFST)
-**Available in English, Spanish, French & German** (see below to implement the task in other languages)
+Available in **English, Spanish, French & German** (see below to implement the task in other languages)
 
 The iFST is a behavioural paradigm aiming to assess the ability to maintain movement imagery with temporal precision. If you are interested in assessing Movement Imagery ability, visit this [Task Platform Project](https://movementimageryability.github.io/) for an overview of open-source behavioural tasks.
 
@@ -14,9 +14,18 @@ An example of the setup is shown below.
 ![iFST Animation](iFST_example.gif)
 
 ## Repository information
-The repository has 1 main folder, which contain **PsychoPy experiment (.psyexp)** and associated files to be able to run the task **locally or online**. Please consult the Readme file before using the task. This experiment is provided as an hybrid PsychoPy experiment, this means it should work locally and online without adjustments. The Readme file contain extensive documentation on the most relevant task settings and detailed information to allow the user further customization.
+This repository has two main folders, which contain **PsychoPy** experiments (`.psyexp`), together with associated files to run them **locally** (lab/desktop experiments) or **online** (in a browser). 
+Please consult the accompanying manuscript [Moreno-Verdú et al., 2026](https://link.springer.com/article/10.3758/s13428-026-03002-3) on the [Movement Imagery Ability Task Platform](https://movementimageryability.github.io/) for a guide on necessary steps to run a task in each of the deployment modes, which can help with the decision.
+- [iFST PsychoPy local](/iFST_local)
+- [iFST PsychoPy online](/iFST_online)
 
-The version provided in this repository may allow flexibility in terms of key task parameters of the iFST (e.g. types of sequences, number of sequences, length of sequences, etc). The optimal protocol is at the user's discretion, but sensible defaults have been implemented.
+The version provided in this repository may allow flexibility in terms of key task parameters of the iFST:
+- types of sequences
+- number of sequences
+- length of sequences
+- repetitions
+
+The optimal protocol is at the user's discretion, but sensible defaults have been implemented.
 
 ## Language expansion
-If you want to contribute to this repository by providing a language translation, or want to run the task in your own language, expansions can be done relatively easily thanks to the implementation of **language localisations** (please read the Readme to understand how to implement these). You can also see [this demo](https://github.com/mmorenoverdu/language_localisation_local) showing how to implement a language localisation in PsychoPy with virtually no code.
+If you want to contribute to this repository by providing a language translation, or want to run the task in your own language, expansions can be done relatively easily thanks to the implementation of language localisations (please read each README to understand how to implement these). You can also see these demos showing how to implement a language localisation in [PsychoPy](https://github.com/mmorenoverdu/language_localisation_demo) and [OpenSesame](https://github.com/carlacz/OpenSesame_Language-Localisation-Demo) with virtually no code.
