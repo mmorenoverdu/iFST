@@ -33,6 +33,7 @@ The data output **must** be processed to obtain meaningful information. An examp
 4. **Run** the experiment locally and **process the data** using the script provided.
 
 **Additional steps if running online (via Pavlovia):**
+
 5. **Link** your Pavlovia account in the Pavlovia tab, if you haven't already.
 6. **Click** "No project" in the Pavlovia tab to start linking the experiment to a new Pavlovia project, and **follow** the procedure PsychoPy indicates.
 7. **Check** your Pavlovia dashboard — the project should now appear there under the same name as your PsychoPy experiment.
