@@ -1,8 +1,11 @@
 # IMAGINED FINGER SEQUENCE TASK (iFST) — Online version (OpenSesame / OSWeb)
 
-**Author:** Marcos Moreno Verdú, 08/07/2026 
+**Author:** Marcos Moreno Verdú, 08/07/2026
+
 **Software:** OpenSesame 4.1.9 · OSWeb backend · Deployed via JATOS  
+
 **Experiment type:** Online (browser-based)  
+
 **Languages supported:** English (EN) · Spanish (ES) · French (FR) · German (DE)
 
 ---------------------------------------
