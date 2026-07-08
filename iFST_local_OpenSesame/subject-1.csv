@@ -1,0 +1,8 @@
+"block_iter","block_type","crit_counter","datetime","feedback","key_presses","run_trial","sa_response","self_assess_construct","seq_acc","seq_resp_keys","seq_resp_rt","seq_time","seq_typed","sequence_code","sequence_type","stim","subject_nr","task_trial_count","trial_type"
+"1","practice","1","Wed Jul  8 10:26:36 2026","1","8","yes","","","1","f;g;h;j;j;h;g;f","0.6102;0.7863;0.9625;1.159;1.3715;1.5447;1.7334;1.9317","1.321","fghjjhgf","fghjjhgf","simple","1","1","0","execution"
+"1","practice","1","Wed Jul  8 10:26:36 2026","1","2","yes","","","1","f;f","0.5165;0.7059","0.189","ff","ff","simple","2","1","0","imagery"
+"1","practice","1","Wed Jul  8 10:26:36 2026","1","8","yes","","","1","f;j;g;h;h;g;j;f","0.4017;0.5792;0.7374;0.8803;1.0758;1.2572;1.417;1.5994","1.198","fjghhgjf","fjghhgjf","complex","3","1","0","execution"
+"1","practice","1","Wed Jul  8 10:26:36 2026","1","2","yes","","","1","f;f","0.3997;0.5458","0.146","ff","ff","complex","4","1","0","imagery"
+"2","task","1","Wed Jul  8 10:26:36 2026","0","8","yes","","","1","f;j;g;h;h;g;j;f","0.5239;0.6848;0.8449;1.0302;1.1853;1.3566;1.5071;1.6828","1.159","fjghhgjf","fjghhgjf","complex","3","1","1","execution"
+"2","task","1","Wed Jul  8 10:26:36 2026","0","2","yes","","","1","f;f","0.4486;0.6058","0.157","ff","ff","complex","4","1","2","imagery"
+"2","task","","Wed Jul  8 10:26:36 2026","","","yes","6","inst_check","","","","","","","","","1","",""

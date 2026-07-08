@@ -1,0 +1,5 @@
+hand,stim,sequence_code,sequence_type,trial_type,key_presses,sequence_picture,prompt_before,prompt
+left,1,jhgffghj,simple,execution,8,ifst_stimuli/simple_execution_left.png,pre_prompt_exe_msg,prompt_exe_msg
+left,2,jj,simple,imagery,2,ifst_stimuli/simple_imagery_left.png,pre_prompt_ima_msg,prompt_ima_msg
+left,3,jfhgghfj,complex,execution,8,ifst_stimuli/complex_execution_left.png,pre_prompt_exe_msg,prompt_exe_msg
+left,4,jj,complex,imagery,2,ifst_stimuli/complex_imagery_left.png,pre_prompt_ima_msg,prompt_ima_msg

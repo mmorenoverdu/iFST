@@ -1,0 +1,187 @@
+﻿message,EN,ES,FR,DE
+title_msg,"Imagined Finger Sequence Task
+(iFST)","Tarea de Secuencia de Dedos Imaginada
+(TSDi)","Tâche de séquence de doigts imaginée
+(TSDi)","Vorgestellte Fingersequenzaufgabe
+(iFST)"
+welcome_msg,"Welcome to the task!
+
+The goal of this task is to assess your ability to imagine finger movements.","Bienvenido/a a la tarea!
+
+El objetivo de esta tarea es valorar tu capacidad para imaginar movimientos con los dedos.","Bienvenue dans cette tâche !
+
+L'objectif de cette tâche est d'évaluer votre capacité à imaginer les mouvements des doigts.",Willkommen zur Aufgabe!
+adv_msg,Press SPACE to continue,Presiona ESPACIO para continuar,Appuyez sur ESPACE pour continuer,"Leertaste drücken, um fortzufahren"
+bye_msg,"You have finished the experiment
+
+Thank you very much for taking part!
+
+The experiment will close in 3 seconds","Has terminado el experimento
+
+Gracias por participar!
+
+El experimento se cerrará en 3 segundos","Vous avez terminé l'expérience.
+
+Merci beaucoup d'y avoir participé !
+
+L'expérience se terminera dans 3 secondes.","Sie haben das Experiment abgeschlossen.
+
+Vielen Dank für Ihre Teilnahme!
+
+Das Experiment wird in 3 Sekunden beendet."
+correct_msg,Correct,Correcto,Correct,Richtig
+incorrect_msg,Incorrect,Incorrecto,Incorrect,Falsch
+time_msg,Time,Tiempo,Temps,Zeit
+seconds_msg,seconds,segundos,seconds,Sekunden
+block_first_msg,"You are going to start the practice part.
+
+The goal is to type the sequences correctly, and familiarise with the difference between execution and imagery.
+
+At this stage, it is critical that you respond correctly as indicated.
+
+You will not progress to the next part until you respond correctly to all sequences in both execution and imagery.","Vas a empezar la parte de práctica.
+
+El objetivo es escribir las secuencias correctamente, y familiarizarte con la diferencia entre ejecución e imaginación.
+
+En este punto, es fundamental que responsas correctamente como se indica.
+
+No avanzarás a la siguiente parte hasta que hayas respondido correctamente a todas las secuencias tanto en ejecución como imaginación.","Vous allez commencer la partie pratique.
+
+L'objectif est de taper correctement les séquences et de vous familiariser avec la différence entre l'exécution et l'imagerie.
+
+À ce stade, il est essentiel que vous répondiez correctement comme indiqué.
+
+Vous ne passerez à la partie suivante que lorsque vous aurez répondu correctement à toutes les séquences, tant en termes d'exécution que d'imagerie.","Sie beginnen nun mit dem Übungsteil.
+
+Ziel ist es, die Sequenzen korrekt einzugeben und sich mit dem Unterschied zwischen Ausführung und Vorstellung vertraut zu machen.
+
+In dieser Phase ist es entscheidend, dass Sie wie angegeben korrekt reagieren."
+block_intro_task_msg,"Now that you have practiced, you will go through the task itself.
+
+Remember your FIRST PRIORITY is to respond ACCURATELY.
+
+Your SECOND PRIORITY is to complete the sequence as QUICKLY AS POSSIBLE.
+
+In this part, you will not have feedback on your performance, but you will not you have finished a trial because the screen will change.","Ahora que has practicado, vas a hacer la tarea como tal.
+
+Recuerda que tu PRIMERA PRIORIDAD es responder de manera CORRECTA.
+
+Tu SEGUNDA PRIORIDAD es completar la secuencia LO MÁS RÁPIDO POSIBLE.
+
+En esta parte, no tendrás feedback. No habrás finalizado el trial hasta que no veas que la pantalla cambia.","Maintenant que vous vous êtes entraîné, vous allez passer à la tâche proprement dite.
+
+N'oubliez pas que votre PREMIÈRE PRIORITÉ est de répondre avec PRÉCISION.
+
+Votre DEUXIÈME PRIORITÉ est de terminer la séquence le PLUS RAPIDEMENT POSSIBLE.
+
+Dans cette partie, vous n'aurez pas de retour sur vos performances, mais vous saurez que vous avez terminé un essai car l'écran changera.","Sie gelangen erst dann zum nächsten Teil, wenn Sie alle Sequenzen sowohl in der Ausführung als auch in der Vorstellung korrekt beantwortet haben.
+
+Nachdem Sie nun geübt haben, beginnen Sie mit der eigentlichen Aufgabe.
+
+Denken Sie daran: Ihre ERSTE PRIORITÄT ist es, GENAU zu antworten.
+
+Ihre ZWEITE PRIORITÄT ist es, die Sequenz so SCHNELL WIE MÖGLICH abzuschließen.
+
+In diesem Teil erhalten Sie kein Feedback zu Ihrer Leistung, aber Sie erkennen das Ende eines Durchgangs daran, dass sich der Bildschirm ändert."
+block_msg_half,"You are halfway through the task.
+
+Please, have a break of at least 1 minute.
+
+The task will resume automatically after a couple of minutes.","Vas por la mitad de la tarea.
+
+Por favor, tómate un descanso de al menos 1 minuto.
+
+La tarea procederá automáticamente en un par de minutos.","Vous êtes à mi-chemin de la tâche.
+
+Veuillez faire une pause d'au moins 1 minute.
+
+La tâche reprendra automatiquement après quelques minutes.","Sie haben die Hälfte der Aufgabe erreicht.
+
+Bitte machen Sie eine Pause von mindestens 1 Minute.
+
+Die Aufgabe wird nach ein paar Minuten automatisch fortgesetzt."
+block_msg_standard,"You have finished the block.
+
+Take a moment to have a break before proceeding.
+
+The task will resume automatically after 1 minute.
+
+You may proceed before if you want. Wait for a message to appear below.","Has terminado el bloque.
+
+Tómate un momento para descansar.
+
+La tarea procederá automáticamente en 1 minuto.
+
+Puedes continuar antes si lo deseas. Espera a que aparezca el mensaje de abajo.","Vous avez terminé le bloc.
+
+Prenez un moment pour faire une pause avant de continuer.
+
+La tâche reprendra automatiquement après 1 minute.
+
+Vous pouvez continuer avant si vous le souhaitez. Attendez qu'un message apparaisse ci-dessous.","Sie haben den Block beendet.
+
+Nehmen Sie sich einen Moment Zeit für eine Pause, bevor Sie fortfahren.
+
+Die Aufgabe wird nach 1 Minute automatisch fortgesetzt.
+
+Sie können auch früher fortfahren, wenn Sie möchten. Warten Sie auf eine unten erscheinende Meldung."
+block_msg,Block,Bloque,Bloc,Block
+out_of_msg,out of,de ,sur,von
+block_end_msg,End of block,Final del bloque,Fin du bloc,Ende des Blocks
+proceed_task_msg,Proceed to task,Continuar a la tarea,Passer à la tâche,Zur Aufgabe fortfahren
+handedness_msg,What is your preferred or dominant hand?,¿Cuál es tu mano preferida o dominante?,Quelle est votre main préférée ou dominante ?,Welche Hand ist Ihre bevorzugte oder dominante Hand?
+left_handed_msg,Left,Izquierda,Gauche,Links
+right_handed_msg,Right,Derecha,Droite,Rechts
+correct_exe_msg,Sequence correct!,Secuencia correcta!,Séquence correcte !,Sequenz korrekt!
+incorrect_exe_msg,"Sequence incorrect. Please, correctly type the sequence. You will repeat the trial.",Secuencia incorrecta. Por favor escribe la secuencia correctamente. Debes repetir el trial.,Séquence incorrecte. Veuillez saisir correctement la séquence. Vous allez répéter l'essai.,Sequenz inkorrekt. Bitte geben Sie die Sequenz korrekt ein. Der Durchgang wird wiederholt.
+correct_ima_msg,Keys correct!,Teclas correctas!,Les clés sont correctes !,Tasten korrekt!
+incorrect_ima_msg,Keys incorrect. You must start and finish with the same key. You will repeat the trial.,Teclas incorrectas.Tienes que empezar y terminar con la misma tecla. Debes repetir el trial.,Clés incorrectes. Vous devez commencer et terminer avec la même clé. Vous allez répéter l'essai.,Tasten inkorrekt. Sie müssen mit derselben Taste beginnen und enden. Der Durchgang wird wiederholt.
+trial_complete_msg,Trial completed,Trial completado,Essai terminé,Durchgang abgeschlossen
+correct_trials_msg,Correct trials: ,Ensayos correctos: ,Essais corrects : ,Korrekte Durchgänge:
+visual_msg,Visual modality,Modalidad visual,Modalité visuelle,Visuelle Modalität
+kine_msg,Kinesthetic modality,Modalidad cinestésica,Modalité kinesthetique,Kinästhetische Modalität
+both_msg,Both modalities,Ambas modalidades,Les deux modalités,Beide Modalitäten
+next_msg,Next,Siguiente,Suivant,Weiter
+pre_prompt_exe_msg,"In the next trial, you will have to PHYSICALLY EXECUTE the movement.
+
+Remember you have to press ALL the keys.","En el próximo intento, tienes que EJECUTAR FÍSICAMENTE el movimiento.
+
+Recuerda que debes presionar TODAS las teclas.","Lors du prochain essai, vous devrez EXÉCUTER PHYSIQUEMENT le mouvement.
+
+N'oubliez pas que vous devez appuyer sur TOUTES les touches.","Im nächsten Durchgang müssen Sie die Bewegung PHYSISCH AUSFÜHREN.
+
+Denken Sie daran, ALLE Tasten zu drücken."
+pre_prompt_ima_msg,"In the next trial, you will have to IMAGINE the movement
+
+Please, focus on BOTH SEEING AND FEELING the movement
+
+Remember you only need to press the FIRST and LAST keys","En el próximo intento, tienes que IMAGINAR el movimiento
+
+Por favor concéntrate TANTO EN VER COMO EN SENTIR el movimiento
+
+Recuerda que solo debes presionar la PRIMERA y la ÚLTIMA tecla","Lors du prochain essai, vous devrez IMAGINER le mouvement
+
+Veuillez vous concentrer à la fois sur le fait de VOIR ET DE SENTIR le mouvement","Im nächsten Durchgang müssen Sie sich die Bewegung VORSTELLEN.
+
+Bitte konzentrieren Sie sich sowohl auf das SEHEN als auch auf das FÜHLEN der Bewegung.
+
+Denken Sie daran, dass Sie nur die ERSTE und LETZTE Taste drücken müssen."
+prompt_exe_msg,"Physically EXECUTE this sequence
+(press all keys).","EJECUTA físicamente esta secuencia
+(presiona todas las teclas)","EXÉCUTEZ physiquement cette séquence
+(appuyez sur toutes les touches).","Diese Sequenz PHYSISCH AUSFÜHREN
+(alle Tasten drücken)."
+prompt_ima_msg,"IMAGINE this sequence
+(press only the First/Last keys).","IMAGINA esta secuencia
+(presiona solo la Primera/Última tecla)","IMAGINEZ cette séquence
+(appuyez uniquement sur les touches Première/Dernière).","Diese Sequenz VORSTELLEN
+(nur die erste/letzte Taste drücken)."
+age_question_msg,Please type in your age and hit ENTER,Escribe tu edad y pressiona ENTER,Indique ton âge et appuyez sur ENTER,Gib dein Alter ein und drücke die ENTER-Taste
+age_msg,Age:,Edad:,Âge :,Alter:
+gender_msg,Gender:,Género,Genre :,Geschlecht:
+f_msg,Female,Mujer,Femme,Weiblich
+m_msg,Male,Hombre,Homme,Männlich
+tg_msg,Trans-gender,Transgénero,Transgenre,Transgender
+nb_msg,Non-binary,No binario,Non binaire,Nicht-binär
+o_msg,Other,Otro,Autre,Sonstiges
+pns_msg,Prefer not saying,Prefiero no decirlo,Préfère ne pas le dire,Möchte ich nicht sagen

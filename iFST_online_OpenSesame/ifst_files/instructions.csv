@@ -1,0 +1,302 @@
+hand,inst_pic,image_w,image_h,text_x,inst_msg_EN,inst_msg_ES,inst_msg_FR,inst_msg_DE
+right,,0,0,0,"In this task you will type or imagine typing two 8-digit sequences with your RIGHT hand. Sometimes you will PHYSICALLY type the sequence. Other times you will only IMAGINE typing the sequence. During imagery, you will be asked to focus on BOTH the: 
+
+VISUAL aspects of the movement (i.e. imagining SEEING your fingers moving from an INTERNAL point of view or FIRST-PERSON perspective)
+
+KINESTHETIC aspects of the movement (i.e. imagining FEELING your muscles contracting and your joints moving)
+
+Please, always aim to focus on BOTH ASPECTS AT THE SAME TIME, even if it is not natural to do so. If you found it difficult, after the task you will have the option to explain your experience.","En esta tarea, escribirás o imaginarás escribir dos secuencias de 8 dígitos con tu mano DERECHA. A veces escribirás FÍSICAMENTE la secuencia. Otras veces solo IMAGINARÁS escribir la secuencia. Durante la imaginación, se te pedirá que te concentres tanto en los: 
+
+aspectos VISUALES del movimiento (es decir, imaginar VER cómo se mueven tus dedos desde un punto de vista INTERNO o una perspectiva en PRIMERA PERSONA)
+
+aspectos CINESTÉSICOS del movimiento (es decir, imaginar SENTIR cómo se contraen tus músculos y se mueven tus articulaciones).
+
+Por favor, intenta siempre concentrarte en AMBOS ASPECTOS AL MISMO TIEMPO, aunque no te resulte natural. Si te resulta difícil, después de la tarea tendrás la opción de explicar tu experiencia.","Dans cette tâche, vous devrez taper ou imaginer taper deux séquences de 8 chiffres avec votre main DROITE. Parfois, vous taperez PHYSIQUEMENT la séquence. D'autres fois, vous vous contenterez d'IMAGINER taper la séquence. Pendant l'imagerie, on vous demandera de vous concentrer à la fois sur : 
+
+les aspects VISUELS du mouvement (c'est-à-dire imaginer VOIR vos doigts bouger d'un point de vue INTERNE ou à la PREMIÈRE PERSONNE)
+
+les aspects KINESTHÉTIQUES du mouvement (c'est-à-dire imaginer que vous SENTEZ vos muscles se contracter et vos articulations bouger)
+
+Veuillez toujours essayer de vous concentrer sur LES DEUX ASPECTS EN MÊME TEMPS, même si cela ne vous semble pas naturel. Si vous avez trouvé cela difficile, vous aurez la possibilité d'expliquer votre expérience après l'exercice.","In dieser Aufgabe werden Sie zwei 8-stellige Sequenzen mit Ihrer RECHTEN Hand tippen oder sich vorstellen zu tippen. Manchmal werden Sie die Sequenz PHYSISCH tippen. Zu anderen Zeiten werden Sie sich das Tippen der Sequenz nur VORSTELLEN. Während der Vorstellung werden Sie gebeten, sich auf BEIDE der folgenden Aspekte zu konzentrieren:
+
+VISUELLE Aspekte der Bewegung (d. h. sich vorzustellen, wie Sie Ihre Finger aus einer INTERNEN Perspektive bzw. aus der ICH-PERSPEKTIVE bewegen)
+
+KINÄSTHETISCHE Aspekte der Bewegung (d. h. sich vorzustellen, wie sich Ihre Muskeln zusammenziehen und sich Ihre Gelenke bewegen)
+
+Bitte versuchen Sie immer, sich auf BEIDE ASPEKTE GLEICHZEITIG zu konzentrieren, auch wenn sich dies nicht natürlich anfühlt. Falls Ihnen dies schwergefallen ist, haben Sie nach der Aufgabe die Möglichkeit, Ihre Erfahrung zu erläutern."
+left,,0,0,0,"In this task you will type or imagine typing two 8-digit sequences with your LEFT hand. Sometimes you will PHYSICALLY type the sequence. Other times you will only IMAGINE typing the sequence. During imagery, you will be asked to focus on BOTH the: 
+
+VISUAL aspects of the movement (i.e. imagining SEEING your fingers moving from an INTERNAL point of view or FIRST-PERSON perspective)
+
+KINESTHETIC aspects of the movement (i.e. imagining FEELING your muscles contracting and your joints moving)
+
+Please, always aim to focus on BOTH ASPECTS AT THE SAME TIME, even if it is not natural to do so. If you found it difficult, after the task you will have the option to explain your experience.","En esta tarea, escribirás o imaginarás escribir dos secuencias de 8 dígitos con tu mano IZQUIERDA. A veces escribirás FÍSICAMENTE la secuencia. Otras veces solo IMAGINARÁS escribir la secuencia. Durante la imaginación, se te pedirá que te concentres tanto en los: 
+
+aspectos VISUALES del movimiento (es decir, imaginar VER cómo se mueven tus dedos desde un punto de vista INTERNO o una perspectiva en PRIMERA PERSONA)
+
+aspectos CINESTÉSICOS del movimiento (es decir, imaginar SENTIR cómo se contraen tus músculos y se mueven tus articulaciones).
+
+Por favor, intenta siempre concentrarte en AMBOS ASPECTOS AL MISMO TIEMPO, aunque no te resulte natural. Si te resulta difícil, después de la tarea tendrás la opción de explicar tu experiencia.","Dans cette tâche, vous devrez taper ou imaginer taper deux séquences de 8 chiffres avec votre main GAUCHE. Parfois, vous taperez PHYSIQUEMENT la séquence. D'autres fois, vous vous contenterez d'IMAGINER taper la séquence. Pendant l'imagerie, on vous demandera de vous concentrer à la fois sur : 
+
+les aspects VISUELS du mouvement (c'est-à-dire imaginer VOIR vos doigts bouger d'un point de vue INTERNE ou à la PREMIÈRE PERSONNE)
+
+les aspects KINESTHÉTIQUES du mouvement (c'est-à-dire imaginer que vous SENTEZ vos muscles se contracter et vos articulations bouger)
+
+Veuillez toujours essayer de vous concentrer sur LES DEUX ASPECTS EN MÊME TEMPS, même si cela ne vous semble pas naturel. Si vous avez trouvé cela difficile, vous aurez la possibilité d'expliquer votre expérience après l'exercice.","In dieser Aufgabe werden Sie zwei 8-stellige Sequenzen mit Ihrer LINKEN Hand tippen oder sich vorstellen zu tippen. Manchmal werden Sie die Sequenz PHYSISCH tippen. Zu anderen Zeiten werden Sie sich das Tippen der Sequenz nur VORSTELLEN. Während der Vorstellung werden Sie gebeten, sich auf BEIDE der folgenden Aspekte zu konzentrieren:
+
+VISUELLE Aspekte der Bewegung (d. h. sich vorzustellen, wie Sie Ihre Finger aus einer INTERNEN Perspektive bzw. aus der ICH-PERSPEKTIVE bewegen)
+
+KINÄSTHETISCHE Aspekte der Bewegung (d. h. sich vorzustellen, wie sich Ihre Muskeln zusammenziehen und sich Ihre Gelenke bewegen)
+
+Bitte versuchen Sie immer, sich auf BEIDE ASPEKTE GLEICHZEITIG zu konzentrieren, auch wenn sich dies nicht natürlich anfühlt. Falls Ihnen dies schwergefallen ist, haben Sie nach der Aufgabe die Möglichkeit, Ihre Erfahrung zu erläutern."
+right,ifst_images/seq_right.png,0.5,0.4,-0.3,"For the task you will use the four fingers of your dominant hand.
+
+Please place your right hand on the keyboard with your fingers on the buttons shown:
+
+F = Index
+G = Middle
+H = Ring
+J = Little
+
+Throughout the task, please maintain your hand in this position.","Para realizar la tarea, utilizarás los cuatro dedos de tu mano dominante.
+
+Coloca tu mano derecha sobre el teclado con los dedos sobre las teclas que se indican a continuación:
+
+F = Índice
+G = Medio
+H = Anular
+J = Meñique
+
+Mantén la mano en esta posición durante toda la tarea.","Pour cette tâche, vous utiliserez les quatre doigts de votre main dominante.
+
+Veuillez placer votre main droite sur le clavier, les doigts sur les touches indiquées :
+
+F = Index
+G = Majeur
+H = Annulaire
+J = Petit doigt
+
+Tout au long de la tâche, veuillez maintenir votre main dans cette position.","Für die Aufgabe verwenden Sie die vier Finger Ihrer dominanten Hand.
+
+Bitte legen Sie Ihre RECHTE Hand auf die Tastatur, wobei Ihre Finger auf den angezeigten Tasten liegen:
+
+F = Zeigefinger
+G = Mittelfinger
+H = Ringfinger
+J = Kleiner Finger
+
+Bitte halten Sie während der gesamten Aufgabe Ihre Hand in dieser Position."
+left,ifst_images/seq_left.png,0.5,0.4,-0.3,"For the task you will use the four fingers of your dominant hand.
+
+Please place your hand on the keyboard with your fingers on the buttons shown:
+
+J = Index
+H = Middle
+G = Ring
+F = Little
+
+Throughout the task, please maintain your hand in this position.","Para realizar la tarea, utilizarás los cuatro dedos de tu mano dominante.
+
+Coloca tu mano sobre el teclado con los dedos sobre las teclas que se indican a continuación:
+
+J = Índice
+H = Medio
+G = Anular
+F = Meñique
+
+Mantén la mano en esta posición durante toda la tarea.","Pour cette tâche, vous utiliserez les quatre doigts de votre main dominante.
+
+Veuillez placer votre main droite sur le clavier, les doigts sur les touches indiquées :
+
+J = Index
+H = Majeur
+G = Annulaire
+F = Petit doigt
+
+Tout au long de la tâche, veuillez maintenir votre main dans cette position.","Für die Aufgabe verwenden Sie die vier Finger Ihrer dominanten Hand.
+
+Bitte legen Sie Ihre Hand auf die Tastatur, wobei Ihre Finger auf den angezeigten Tasten liegen:
+
+J = Zeigefinger
+H = Mittelfinger
+G = Ringfinger
+F = Kleiner Finger
+
+Bitte halten Sie während der gesamten Aufgabe Ihre Hand in dieser Position."
+right,ifst_images/seq_simple_right.png,0.5,0.4,-0.3,"This is an example sequence. DO NOT practice the sequence at this stage.
+
+In the image, you can see that each black dot corresponds to a key press. The black line indicates what should be next key press.
+
+In the case of this sequence, the correct order would be:
+
+Index-Middle-Ring-Little-Little-Ring-Middle-Index","Esta es una secuencia de ejemplo. NO practiques la secuencia en este momento.
+
+En la imagen, puedes ver que cada punto negro corresponde a una pulsación de tecla. La línea negra indica cuál debería ser la siguiente.
+
+En el caso de esta secuencia, el orden correcto sería:
+
+Índice-Medio-Anular-Meñique-Meñique-Anular-Medio-Índice","Il s'agit d'un exemple de séquence. NE pratiquez PAS la séquence à ce stade.
+
+Sur l'image, vous pouvez voir que chaque point noir correspond à une pression sur une touche. La ligne noire indique la touche sur laquelle vous devez appuyer ensuite.
+
+Dans le cas de cette séquence, l'ordre correct serait :
+
+Index-Majeur-Annulaire-Auriculaire-Annulaire-Majeur-Index","Dies ist eine Beispielsequenz. ÜBEN Sie die Sequenz zu diesem Zeitpunkt NICHT.
+
+Im Bild können Sie sehen, dass jeder schwarze Punkt einem Tastendruck entspricht. Die schwarze Linie zeigt an, welcher Tastendruck als Nächstes erfolgen sollte.
+
+Im Fall dieser Sequenz wäre die korrekte Reihenfolge:
+
+Zeigefinger-Mittelfinger-Ringfinger-Kleiner Finger-Kleiner Finger-Ringfinger-Mittelfinger-Zeigefinger"
+left,ifst_images/seq_simple_left.png,0.5,0.4,-0.3,"This is an example sequence. DO NOT practice the sequence at this stage.
+
+In the image, you can see that each black dot corresponds to a key press. The black line indicates what should be next key press.
+
+In the case of this sequence, the correct order would be:
+
+Index-Middle-Ring-Little-Little-Ring-Middle-Index","Esta es una secuencia de ejemplo. NO practiques la secuencia en este momento.
+
+En la imagen, puedes ver que cada punto negro corresponde a una pulsación de tecla. La línea negra indica cuál debería ser la siguiente.
+
+En el caso de esta secuencia, el orden correcto sería:
+
+Índice-Medio-Anular-Meñique-Meñique-Anular-Medio-Índice","Il s'agit d'un exemple de séquence. NE pratiquez PAS la séquence à ce stade.
+
+Sur l'image, vous pouvez voir que chaque point noir correspond à une pression sur une touche. La ligne noire indique la touche sur laquelle vous devez appuyer ensuite.
+
+Dans le cas de cette séquence, l'ordre correct serait :
+
+Index-Majeur-Annulaire-Auriculaire-Annulaire-Majeur-Index","Dies ist eine Beispielsequenz. ÜBEN Sie die Sequenz zu diesem Zeitpunkt NICHT.
+
+Im Bild können Sie sehen, dass jeder schwarze Punkt einem Tastendruck entspricht. Die schwarze Linie zeigt an, welcher Tastendruck als Nächstes erfolgen sollte.
+
+Im Fall dieser Sequenz wäre die korrekte Reihenfolge:
+
+Zeigefinger-Mittelfinger-Ringfinger-Kleiner Finger-Kleiner Finger-Ringfinger-Mittelfinger-Zeigefinger"
+right,ifst_images/seq_complex_right.png,0.5,0.4,-0.3,"This is another example of a sequence. DO NOT practice the sequence at this stage.
+
+Here the correct order would be:
+
+Index-Little-Middle-Ring-Ring-Middle-Little-Index","Este es otro ejemplo de secuencia. NO practiques la secuencia en esta etapa.
+
+Aquí, el orden correcto sería:
+
+Índice-Meñique-Medio-Anular-Anular-Medio-Meñique-Índice","Voici un autre exemple de séquence. NE pratiquez PAS la séquence à ce stade.
+
+Ici, l'ordre correct serait :
+
+Index-Petit-Majeur-Annulaire-Annulaire-Majeur-Petit-Index","Dies ist ein weiteres Beispiel für eine Sequenz. ÜBEN Sie die Sequenz zu diesem Zeitpunkt NICHT.
+
+Hier wäre die korrekte Reihenfolge:
+
+Zeigefinger-Kleiner Finger-Mittelfinger-Ringfinger-Ringfinger-Mittelfinger-Kleiner Finger-Zeigefinger"
+left,ifst_images/seq_complex_left.png,0.5,0.4,-0.3,"This is another example of a sequence. DO NOT practice the sequence at this stage.
+
+Here the correct order would be:
+
+Index-Little-Middle-Ring-Ring-Middle-Little-Index","Este es otro ejemplo de secuencia. NO practiques la secuencia en esta etapa.
+
+Aquí, el orden correcto sería:
+
+Índice-Meñique-Medio-Anular-Anular-Medio-Meñique-Índice","Voici un autre exemple de séquence. NE pratiquez PAS la séquence à ce stade.
+
+Ici, l'ordre correct serait :
+
+Index-Petit-Majeur-Annulaire-Annulaire-Majeur-Petit-Index","Dies ist ein weiteres Beispiel für eine Sequenz. ÜBEN Sie die Sequenz zu diesem Zeitpunkt NICHT.
+
+Hier wäre die korrekte Reihenfolge:
+
+Zeigefinger-Kleiner Finger-Mittelfinger-Ringfinger-Ringfinger-Mittelfinger-Kleiner Finger-Zeigefinger"
+right,ifst_images/seq_execution_right.png,0.6,0.5,-0.3,"When you are PHYSICALLY executing the sequence, you will have to press all the keys to finish the trial.
+
+You will see these images in this case.","Cuando estés ejecutando FÍSICAMENTE la secuencia, tendrás que pulsar todas las teclas para terminar ese intento.
+
+En este caso, verás estas imágenes.","Lorsque vous exécutez PHYSIQUEMENT la séquence, vous devrez appuyer sur toutes les touches pour terminer l'essai.
+
+Dans ce cas, vous verrez ces images.","Wenn Sie die Sequenz PHYSISCH AUSFÜHREN, müssen Sie alle Tasten drücken, um den Durchgang zu beenden.
+
+Sie sehen in diesem Fall diese Bilder."
+left,ifst_images/seq_execution_left.png,0.6,0.5,-0.3,"When you are PHYSICALLY executing the sequence, you will have to press all the keys to finish the trial.
+
+You will see these images in this case.","Cuando estés ejecutando FÍSICAMENTE la secuencia, tendrás que pulsar todas las teclas para terminar ese intento.
+
+En este caso, verás estas imágenes.","Lorsque vous exécutez PHYSIQUEMENT la séquence, vous devrez appuyer sur toutes les touches pour terminer l'essai.
+
+Dans ce cas, vous verrez ces images.","Wenn Sie die Sequenz PHYSISCH AUSFÜHREN, müssen Sie alle Tasten drücken, um den Durchgang zu beenden.
+
+Sie sehen in diesem Fall diese Bilder."
+right,ifst_images/seq_imagery_right.png,0.6,0.5,-0.3,"When you are IMAGINING the sequence, press ONLY the FIRST key of the sequence, IMAGINE the following movements, and press the LAST key again.
+
+In the example shown, you would:
+Physically press with the index.
+Imagine pressing with the rest of the fingers.
+Physically press with the index.
+
+When you are imagining the movements, DO NOT MOVE your hand, keep it still over the indicated keys.","Cuando IMAGINES la secuencia, pulsa SOLO la PRIMERA tecla de la secuencia, IMAGINA los siguientes movimientos y vuelve a pulsar la ÚLTIMA tecla.
+
+En el ejemplo mostrado, harías lo siguiente:
+Pulsa físicamente con el índice.
+Imagina que pulsas con el resto de los dedos.
+Pulsa físicamente con el índice.
+
+Cuando imagines los movimientos, NO MUEVAS la mano, mantenla quieta sobre las teclas indicadas.","Lorsque vous IMAGINEZ la séquence, appuyez UNIQUEMENT sur la PREMIÈRE touche de la séquence, IMAGINEZ les mouvements suivants, puis appuyez à nouveau sur la DERNIÈRE touche.
+
+Dans l'exemple présenté, vous devriez :
+Appuyer physiquement avec l'index.
+Imaginer appuyer avec les autres doigts.
+Appuyer physiquement avec l'index.
+
+Lorsque vous imaginez les mouvements, NE BOUGEZ PAS votre main, gardez-la immobile au-dessus des touches indiquées.","Wenn Sie sich die Sequenz VORSTELLEN, drücken Sie NUR die ERSTE Taste der Sequenz, STELLEN sich die folgenden Bewegungen vor und drücken anschließend erneut die LETZTE Taste.
+
+Im gezeigten Beispiel würden Sie:
+Physisch mit dem Zeigefinger drücken.
+Sich das Drücken mit den übrigen Fingern vorstellen.
+Physisch erneut mit dem Zeigefinger drücken.
+
+Wenn Sie sich die Bewegungen vorstellen, BEWEGEN Sie Ihre Hand NICHT, halten Sie sie ruhig über den angegebenen Tasten."
+left,ifst_images/seq_imagery_left.png,0.6,0.5,-0.3,"When you are IMAGINING the sequence, press ONLY the FIRST key of the sequence, IMAGINE the following movements, and press the LAST key again.
+
+In the example shown, you would:
+Physically press with the index.
+Imagine pressing with the rest of the fingers.
+Physically press with the index.
+
+When you are imagining the movements, DO NOT MOVE your hand, keep it still over the indicated keys.","Cuando IMAGINES la secuencia, pulsa SOLO la PRIMERA tecla de la secuencia, IMAGINA los siguientes movimientos y vuelve a pulsar la ÚLTIMA tecla.
+
+En el ejemplo mostrado, harías lo siguiente:
+Pulsa físicamente con el índice.
+Imagina que pulsas con el resto de los dedos.
+Pulsa físicamente con el índice.
+
+Cuando imagines los movimientos, NO MUEVAS la mano, mantenla quieta sobre las teclas indicadas.","Lorsque vous IMAGINEZ la séquence, appuyez UNIQUEMENT sur la PREMIÈRE touche de la séquence, IMAGINEZ les mouvements suivants, puis appuyez à nouveau sur la DERNIÈRE touche.
+
+Dans l'exemple présenté, vous devriez :
+Appuyer physiquement avec l'index.
+Imaginer appuyer avec les autres doigts.
+Appuyer physiquement avec l'index.
+
+Lorsque vous imaginez les mouvements, NE BOUGEZ PAS votre main, gardez-la immobile au-dessus des touches indiquées.","Wenn Sie sich die Sequenz VORSTELLEN, drücken Sie NUR die ERSTE Taste der Sequenz, STELLEN sich die folgenden Bewegungen vor und drücken anschließend erneut die LETZTE Taste.
+
+Im gezeigten Beispiel würden Sie:
+Physisch mit dem Zeigefinger drücken.
+Sich das Drücken mit den übrigen Fingern vorstellen.
+Physisch erneut mit dem Zeigefinger drücken.
+
+Wenn Sie sich die Bewegungen vorstellen, BEWEGEN Sie Ihre Hand NICHT, halten Sie sie ruhig über den angegebenen Tasten."
+right,,0,0,0,"The goal of the task is to complete the sequence as QUICKLY and ACCURATELY as you can, in both execution and imagery.
+
+However, we ask you to PRIORITISE ACCURACY over speed. That is, try to complete the task as quickly as you can, while ensuring you  complete the sequence correctly.
+
+You do not have to start typing or imagining immediately after the trial begins, but when you start the movement, try to complete it as quickly and accurately as you can.","El objetivo de la tarea es completar la secuencia lo más RÁPIDA y PRECISAMENTE posible, tanto en la ejecución como en la imaginación.
+
+Sin embargo, te pedimos que PRIORICES LA PRECISIÓN sobre la velocidad. Es decir, intenta completar la tarea lo más rápido posible, asegurándote de completar la secuencia correctamente.
+
+No es necesario que empieces a escribir o a imaginar inmediatamente después de que comience cada intento, pero cuando empiece el movimiento, intenta completarlo lo más rápido y con la mayor precisión posible.","L'objectif de l'exercice est d'effectuer la séquence aussi RAPIDEMENT et PRÉCISÉMENT que possible, tant au niveau de l'exécution que de l'imagerie mentale.
+
+Cependant, nous vous demandons de PRIVILÉGIER LA PRÉCISION plutôt que la vitesse. Autrement dit, essayez d'effectuer l'exercice aussi rapidement que possible, tout en veillant à  effectuer la séquence correctement.
+
+Vous n'êtes pas obligé de commencer à taper ou à imaginer immédiatement après le début de l'essai, mais lorsque vous commencez le mouvement, essayez de le réaliser aussi rapidement et précisément que possible.","Ziel der Aufgabe ist es, die Sequenz sowohl bei der Ausführung als auch bei der Vorstellung so SCHNELL und GENAU wie möglich zu absolvieren.
+
+Wir bitten Sie jedoch, die GENAUIGKEIT gegenüber der Geschwindigkeit zu PRIORISIEREN. Das heißt, versuchen Sie, die Aufgabe so schnell wie möglich zu erledigen, während Sie sicherstellen, dass Sie die Sequenz korrekt ausführen.
+
+Sie müssen nicht sofort nach Beginn des Durchgangs mit dem Tippen oder Vorstellen beginnen, aber sobald Sie die Bewegung starten, versuchen Sie, sie so schnell und genau wie möglich abzuschließen."

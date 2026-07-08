@@ -1,0 +1,1019 @@
+---
+API: 3
+OpenSesame: 4.1.9
+Platform: nt
+---
+set width 1024
+set title iFST_local
+set subject_parity even
+set subject_nr 0
+set start experiment
+set sound_sample_size -16
+set sound_freq 48000
+set sound_channels 2
+set sound_buf_size 1024
+set sampler_backend psycho
+set round_decimals 2
+set mouse_backend psycho
+set keyboard_backend psycho
+set height 768
+set fullscreen no
+set form_clicks no
+set foreground black
+set font_underline no
+set font_size 18
+set font_italic False
+set font_family mono
+set font_bold False
+set experiment_path "C:\\Users\\morenoverdu\\OneDrive - UCL\\BAS-Lab\\Github repositories\\iFST\\iFST_local_OpenSesame"
+set disable_garbage_collection False
+set description "iFST - Imagined Finger Sequence Task"
+set color_backend psycho
+set clock_backend psycho
+set canvas_backend psycho
+set background white
+
+define sequence block_seq
+	set flush_keyboard yes
+	set description "One block"
+	run block_start_script True
+	run seq_loop True
+	run self_assess_loop "[self_assess_show] = 1"
+
+define inline_script block_start_script
+	set description "Block start screen and settings"
+	___run__
+	# ---------------------------------------------------------------
+	# block_start_script — Run phase
+	# Executes once at the start of each block (practice or task).
+	#
+	# Responsibilities:
+	#   1. Increment the block counter and reset per-block variables.
+	#   2. Determine block type (practice vs. task) and the sequence
+	#      assigned to this participant for this block.
+	#   3. Display a timed start screen (max 60 s, advance on SPACE)
+	#      with block number, instructions, and a live countdown timer.
+	# ---------------------------------------------------------------
+	experiment = self.experiment
+	
+	# Screen scale factor computed in exp_settings_script.
+	# Multiply all pixel coordinates by sc so the layout scales
+	# proportionally across different monitor resolutions.
+	sc = experiment.sc
+	
+	import textwrap
+	def _wrap(t, w=90):
+	    out = []
+	    for p in t.split('\n'):
+	        out.extend(textwrap.wrap(p, w) if p.strip() else [''])
+	    return '<br>'.join(out)
+	
+	# --- Reset block-level variables ---
+	var.block_number     = int(var.block_number) + 1  # 1-indexed block counter
+	var.end_block        = 'no'   # set to 'yes' when the block criterion is met
+	var.task_trial_count = 0      # counts executed trials in task blocks
+	if var.block_number == 1:
+	    # Initialise per-stimulus correct-trial counters for the practice block.
+	    # Keys 1-4 correspond to the four stimulus/sequence combinations.
+	    experiment.stim_counters = {1: 0, 2: 0, 3: 0, 4: 0}
+	
+	bn = int(var.block_number)     # current block number (1-indexed)
+	pb = int(var.practice_blocks)  # number of practice blocks (default: 1)
+	tt = int(var.total_blocks)     # total number of blocks (default: 3)
+	
+	# --- Determine block type and the sequence assigned for this block ---
+	if bn == 1:
+	    # Practice block: feedback enabled, no self-assessment questionnaire.
+	    var.block_type       = 'practice'
+	    var.feedback         = 1
+	    var.self_assess_show = 0
+	    block_message        = var.block_first_msg
+	elif bn == pb + 1:
+	    # First task block: no feedback; self-assessment shown after.
+	    # Sequence assignment: group 0 → simple first; group 1 → complex first.
+	    var.block_type       = 'task'
+	    var.feedback         = 0
+	    var.self_assess_show = 1
+	    var.sequence         = 'simple' if int(var.group) == 0 else 'complex'
+	    block_message        = var.block_intro_task_msg
+	else:
+	    # Second task block: participant performs the complementary sequence.
+	    var.block_type       = 'task'
+	    var.feedback         = 0
+	    var.self_assess_show = 1
+	    var.sequence         = 'complex' if int(var.group) == 0 else 'simple'
+	    block_message        = var.block_msg_standard
+	
+	# --- Build and display the block-start screen ---
+	# All positional and font-size values are multiplied by sc so the
+	# layout fills the screen proportionally on any monitor.
+	c = Canvas(background_color='white')
+	c['blk_n']   = Text(block_msg + ' ' + str(bn) + ' ' + out_of_msg + ' ' +
+	                str(tt),
+	                color='black', x=0, y=int(-320*sc),
+	                font_size=int(24*sc), font_bold=True)
+	c['blk_txt'] = Text(_wrap(block_message), color='black',
+	                x=0, y=int(20*sc),
+	                font_size=int(17*sc), html=True)
+	c['timer_t'] = Text('00:00', color='black',
+	                x=int(-430*sc), y=int(330*sc), font_size=int(24*sc))
+	c['adv_t']   = Text(var.adv_msg, color='#888888',
+	                x=0, y=int(330*sc), font_size=int(18*sc))
+	c.show()
+	
+	# --- Timed wait: advance on SPACE or after 60 seconds ---
+	kb      = Keyboard(keylist=['space'], timeout=1)  # 1 ms poll interval
+	t_start = clock.time()
+	max_ms  = 60000  # maximum wait duration in milliseconds
+	
+	while True:
+	    elapsed = int((clock.time() - t_start) / 1000)  # seconds elapsed
+	    mm, ss  = elapsed // 60, elapsed % 60
+	    c['timer_t'].text = f"{mm:02d}:{ss:02d}"   # update live timer text
+	    c.show()
+	    key, _ = kb.get_key()
+	    if key == 'space':
+	        break
+	    if elapsed * 1000 >= max_ms:
+	        break
+	mouse.show_cursor(show=False)  # hide cursor during the main experiment
+	__end__
+	___prepare__
+	pass
+	__end__
+
+define loop blocks_loop
+	set source_file ""
+	set source table
+	set repeat 1
+	set order sequential
+	set description "Practice + 2 task blocks"
+	set cycles 3
+	set continuous no
+	set break_if_on_first yes
+	set break_if False
+	setcycle 0 block_iter 1
+	setcycle 1 block_iter 2
+	setcycle 2 block_iter 3
+	run block_seq
+
+define inline_script bye_script
+	set description "Goodbye screen"
+	___run__
+	# ---------------------------------------------------------------
+	# bye_script — Run phase
+	# Displays a brief goodbye message at the end of the experiment.
+	# ---------------------------------------------------------------
+	experiment = self.experiment
+	
+	# Screen scale factor for proportional positioning.
+	sc = experiment.sc
+	
+	c = Canvas()
+	c.background_color = 'white'
+	c['bye'] = Text(var.bye_msg, color='black', x=0, y=0,
+	              font_size=int(24*sc), max_width=int(700*sc))
+	c.show()
+	clock.sleep(3000)  # display for 3 seconds before the experiment closes
+	__end__
+	___prepare__
+	pass
+	__end__
+
+define inline_script exp_settings_script
+	set description "Initialise variables and load messages"
+	___run__
+	pass
+	__end__
+	___prepare__
+	# ---------------------------------------------------------------
+	# exp_settings_script — Prepare phase
+	# Runs once at experiment start, before any screens are shown.
+	#
+	# Responsibilities:
+	#   1. Set all global experiment variables (block counts, defaults).
+	#   2. Load localised message strings from messages.xlsx and register
+	#      an update helper (experiment.update_messages) so other scripts
+	#      can call it when the language changes.
+	#   3. Detect the screen resolution and compute a uniform pixel scale
+	#      factor (experiment.sc) used throughout all scripts to position
+	#      stimuli correctly on any monitor size.
+	# ---------------------------------------------------------------
+	experiment = self.experiment
+	import openpyxl, os
+	
+	# --- Global experiment parameters ---
+	var.n_reps           = 1     # repetitions of the conditions file per task block
+	var.practice_blocks  = 1     # number of practice blocks
+	var.task_blocks      = 2     # number of task blocks
+	var.total_blocks     = 3     # total blocks (practice + task)
+	var.target_per_stim  = 1     # correct trials needed per stimulus to pass practice
+	var.block_number     = 0     # incremented to 1 on first block_start_script call
+	var.lang_code        = 'EN'  # default language; overwritten by lang_select_script
+	var.handedness       = 'right'
+	var.conditions_file  = 'ifst_files/conditions_right.xlsx'
+	
+	# Counterbalancing: even subject numbers → group 0 (simple first);
+	#                   odd  subject numbers → group 1 (complex first).
+	var.group            = 0 if int(var.subject_nr) % 2 == 0 else 1
+	
+	# Default values; overwritten by block_start_script at each block start.
+	var.sequence         = 'simple'
+	var.feedback         = 1
+	var.self_assess_show = 1
+	var.end_block        = 'no'
+	var.run_trial        = 'yes'
+	var.task_trial_count = 0
+	var.block_type       = 'practice'
+	var.sa_response      = -1   # -1 = not yet answered (self-assessment not shown)
+	
+	# Initialise per-stimulus correct-trial counters (reset again in block_start_script).
+	experiment.stim_counters = {1: 0, 2: 0, 3: 0, 4: 0}
+	
+	# --- Load localised message strings from messages.xlsx ---
+	# The spreadsheet has one row per message key and one column per language
+	# (EN, ES, FR, DE). Strings are stored on the experiment object and
+	# pushed to var.* by experiment.update_messages(lang_code).
+	exp_dir  = experiment.experiment_path
+	msg_file = os.path.join(exp_dir, 'messages.xlsx')
+	wb = openpyxl.load_workbook(msg_file)
+	ws = wb.active
+	experiment.messages = {}
+	for row in ws.iter_rows(min_row=2, values_only=True):
+	    if row[0]:
+	        experiment.messages[row[0]] = {
+	            'EN': row[1] or '', 'ES': row[2] or '',
+	            'FR': row[3] or '', 'DE': row[4] or ''}
+	
+	def _upd(lc):
+	    for k, v in experiment.messages.items():
+	        setattr(var, k, v.get(lc) or v.get('EN', ''))
+	
+	experiment.update_messages = _upd
+	experiment.update_messages('EN')  # load English strings as default
+	
+	# --- Screen resolution detection and pixel scale factor ---
+	# The experiment was designed at 1024 x 768 pixels (the OpenSesame
+	# design resolution set in General Properties). When run fullscreen
+	# on a different monitor, all pixel coordinates must be scaled so
+	# the layout fills the screen proportionally.
+	#
+	# experiment.sc  : uniform (aspect-ratio-preserving) scale factor
+	# experiment.sw  : actual screen width  in pixels
+	# experiment.sh  : actual screen height in pixels
+	#
+	# Usage in other scripts:
+	#   sc = experiment.sc
+	#   y_bottom = int(307 * sc)
+	try:
+	    import pyglet
+	    _s = pyglet.canvas.get_display().get_default_screen()
+	    experiment.sw = _s.width
+	    experiment.sh = _s.height
+	    # Uniform scale: the dimension that fills first limits the factor,
+	    # preserving the aspect ratio (black bars may appear on wider screens).
+	    experiment.sc = min(_s.width / 1024.0, _s.height / 768.0)
+	except Exception:
+	    # If detection fails, assume the reference resolution (no scaling).
+	    experiment.sw = 1024
+	    experiment.sh = 768
+	    experiment.sc = 1.0
+	__end__
+
+define sequence experiment
+	set flush_keyboard yes
+	set description "Main experiment sequence"
+	run exp_settings_script True
+	run lang_select_script True
+	run welcome_script True
+	run instructions_loop True
+	run blocks_loop True
+	run bye_script True
+
+define inline_script inst_script
+	set description "Show one instruction slide (filtered by handedness)"
+	___run__
+	# ---------------------------------------------------------------
+	# inst_script — Run phase
+	# Displays one instruction slide from instructions.xlsx.
+	# Slides are filtered by handedness: only slides matching the
+	# participant's hand are shown; others are silently skipped.
+	#
+	# Layout: title near top; optionally an image on the right and
+	# wrapped text on the left; advance prompt at the bottom.
+	# SPACE advances to the next slide.
+	# ---------------------------------------------------------------
+	experiment = self.experiment
+	
+	# Skip slides that are not for this participant's handedness.
+	if var.hand != var.handedness:
+	    pass
+	else:
+	    import os
+	    import textwrap
+	    def _wrap(t, w):
+	        out = []
+	        for p in t.split('\n'):
+	            out.extend(textwrap.wrap(p, w) if p.strip() else [''])
+	        return '<br>'.join(out)
+	
+	    # Screen scale factor for proportional positioning.
+	    sc  = experiment.sc
+	    lc  = var.lang_code
+	    msg = getattr(var, 'inst_msg_' + lc, var.inst_msg_EN)
+	
+	    has_img = float(var.image_w) > 0  # True when this slide includes an image
+	    exp_dir = experiment.experiment_path
+	
+	    c = Canvas()
+	    c.background_color = 'white'
+	    # Title positioned near the top of the screen.
+	    c['title'] = Text(var.title_msg, color='black',
+	                  x=0, y=int(-270*sc), font_size=int(22*sc))
+	
+	    if has_img:
+	        # Image dimensions and text x-position are stored in the loop table
+	        # as fractions of the design height (768). Multiply by 768*sc to
+	        # convert to scaled canvas pixels.
+	        iw = int(float(var.image_w) * 768 * sc)  # target image width  (px)
+	        ih = int(float(var.image_h) * 768 * sc)  # target image height (px)
+	        tx = int(float(var.text_x)  * 768 * sc)  # text block x-centre (px)
+	        ix = int(0.28               * 768 * sc)  # image x-centre (28% of design height)
+	        img_path = os.path.join(exp_dir, var.inst_pic)
+	        from PIL import Image as PILImage
+	        _pil = PILImage.open(img_path)
+	        _nat_w, _nat_h = _pil.size
+	        # Compute PIL scale to fit inside (iw x ih) preserving aspect ratio.
+	        _scale = min(iw / _nat_w, ih / _nat_h)
+	        c['inst_img']  = Image(img_path, x=ix, y=0, scale=_scale)
+	        c['inst_text'] = Text(_wrap(msg, 45), color='black',
+	                          x=tx, y=0,
+	                          font_size=int(16*sc), html=True)
+	    else:
+	        # Text-only slide: centre the text block slightly above screen centre.
+	        c['inst_text'] = Text(_wrap(msg, 90), color='black',
+	                          x=0, y=int(-60*sc),
+	                          font_size=int(16*sc), html=True)
+	
+	    # Advance prompt at the bottom of the screen.
+	    c['adv'] = Text(var.adv_msg, color='#aaaaaa',
+	                  x=0, y=int(340*sc), font_size=int(18*sc))
+	    c.show()
+	
+	    kb = Keyboard(keylist=['space'], timeout=None)
+	    kb.get_key()  # wait for SPACE before advancing to the next slide
+	__end__
+	___prepare__
+	pass
+	__end__
+
+define loop instructions_loop
+	set source_file "ifst_files/instructions.xlsx"
+	set source file
+	set repeat 1
+	set order sequential
+	set description "Instruction slides"
+	set cycles 1
+	set continuous no
+	set break_if_on_first yes
+	set break_if False
+	setcycle 0 empty_column ""
+	run instructions_seq
+
+define sequence instructions_seq
+	set flush_keyboard yes
+	set description "One instruction slide"
+	run inst_script True
+
+define inline_script lang_select_script
+	set description "Language selection screen"
+	___run__
+	# ---------------------------------------------------------------
+	# lang_select_script — Run phase
+	# Shows four language-selection buttons (EN / ES / FR / DE).
+	# A mouse click on a button sets var.lang_code and reloads all
+	# message strings via experiment.update_messages().
+	# ---------------------------------------------------------------
+	experiment = self.experiment
+	
+	# Screen scale factor for proportional button and text positioning.
+	sc = experiment.sc
+	
+	# Button dimensions (scaled to screen).
+	btn_w = int(160 * sc)
+	btn_h = int(60  * sc)
+	
+	# Each tuple: (language code, display label, scaled x-centre of button).
+	btns = [
+	    ('EN', 'English',      int(-240 * sc)),
+	    ('ES', u'Espa\xf1ol', int( -80 * sc)),
+	    ('FR', u'Fran\xe7ais', int(  80 * sc)),
+	    ('DE', 'Deutsch',      int( 240 * sc)),
+	]
+	
+	y_title = int(-120 * sc)  # y for the "Select language" title
+	y_btn   = int( -30 * sc)  # y for the top edge of the buttons
+	y_lbl   = int(  -5 * sc)  # y for the text labels inside the buttons
+	
+	c = Canvas()
+	c.background_color = 'white'
+	c['title'] = Text('Select language',
+	              color='black', x=0, y=y_title, font_size=int(24*sc))
+	for code, label, bx in btns:
+	    c[f'btn_{code}'] = Rect(x=bx - btn_w//2, y=y_btn,
+	                         w=btn_w, h=btn_h, color='#5588cc', fill=True)
+	    c[f'lbl_{code}'] = Text(label, color='black',
+	                         x=bx, y=y_lbl, font_size=int(20*sc))
+	c.show()
+	
+	# --- Wait for a valid mouse click on one of the language buttons ---
+	mouse = Mouse(visible=True)
+	while True:
+	    btn, pos, _ = mouse.get_click()
+	    if pos is None:
+	        continue
+	    mx, my = pos
+	    for code, label, bx in btns:
+	        # Hit-test: check whether the click landed inside this button.
+	        if (bx - btn_w//2) <= mx <= (bx + btn_w//2) \
+	                    and y_btn <= my <= y_btn + btn_h:
+	            var.lang_code = code
+	            experiment.update_messages(code)  # reload all strings in the new language
+	            mouse.show_cursor(show=False)
+	            break
+	    else:
+	        continue
+	    break
+	__end__
+	___prepare__
+	pass
+	__end__
+
+define logger logger
+	set description "Registra datos experimentales"
+	set auto_log no
+	log subject_nr
+	log datetime
+	log block_iter
+	log block_type
+	log trial_type
+	log stim
+	log sequence_code
+	log sequence_type
+	log key_presses
+	log feedback
+	log run_trial
+	log seq_typed
+	log seq_acc
+	log seq_time
+	log seq_resp_keys
+	log seq_resp_rt
+	log crit_counter
+	log task_trial_count
+	log self_assess_construct
+	log sa_response
+
+define inline_script pre_trial_script
+	set description "Pre-trial prompt; sets run_trial"
+	___run__
+	# ---------------------------------------------------------------
+	# pre_trial_script — Run phase
+	# Runs before every trial in the trial loop.
+	#
+	# Responsibilities:
+	#   1. Reset self-assessment carry-over variables so the logger
+	#      does not inherit stale values from the previous block.
+	#   2. Decide whether this trial should execute (var.run_trial):
+	#        - Task blocks   : run if the trial sequence_type matches
+	#                          the sequence assigned to this participant.
+	#        - Practice block: run if this stimulus has not yet reached
+	#                          the criterion (target_per_stim correct).
+	#   3. If the trial runs, show a colour-coded preparatory prompt
+	#      and wait for SPACE before the stimulus screen appears.
+	# ---------------------------------------------------------------
+	experiment = self.experiment
+	current_stim = int(var.stim)  # stimulus ID (1-4) from the conditions file
+	
+	# Reset self-assessment variables so they appear blank in trial rows
+	# of the CSV (they are populated only during the self-assessment phase).
+	var.sa_response           = ''
+	var.self_assess_construct = ''
+	
+	# --- Determine whether this trial should execute ---
+	if var.block_type == 'task':
+	    # Task block: only run trials whose sequence_type matches the
+	    # sequence assigned to this participant for this block.
+	    var.run_trial = 'yes' if var.sequence_type == var.sequence else 'no'
+	else:
+	    # Practice block: run until this stimulus has been correctly
+	    # performed target_per_stim times (tracked by stim_counters).
+	    # NOTE: variable named sc here holds the stim counters dict,
+	    #       not the screen scale factor.
+	    sc = experiment.stim_counters
+	    var.run_trial = 'no' if sc[current_stim] >= int(var.target_per_stim) else 'yes'
+	
+	if var.run_trial == 'yes':
+	    # --- Show a colour-coded preparatory prompt ---
+	    # Purple = imagery trial, Blue = execution trial.
+	    if var.trial_type == 'imagery':
+	        prompt_before = var.pre_prompt_ima_msg
+	        cond_color = 'purple'
+	    else:
+	        prompt_before = var.pre_prompt_exe_msg
+	        cond_color = 'blue'
+	
+	    import textwrap
+	    def _wrap(t, w=55):
+	        out = []
+	        for p in t.split('\n'):
+	            out.extend(textwrap.wrap(p, w) if p.strip() else [''])
+	        return '<br>'.join(out)
+	
+	    # Use px_sc for screen scale to avoid shadowing the stim_counters
+	    # variable (sc) used in the practice branch above.
+	    px_sc = experiment.sc
+	
+	    c = Canvas(background_color='white')
+	    c['prompt'] = Text(_wrap(prompt_before), color=cond_color,
+	                   x=0, y=0,
+	                   font_size=int(20*px_sc), html=True)
+	    # Advance prompt near the bottom of the screen.
+	    c['adv'] = Text(var.adv_msg, color=cond_color,
+	                   x=0, y=int(300*px_sc), font_size=int(22*px_sc))
+	    c.show()
+	
+	    kb = Keyboard(keylist=['space'], timeout=None)
+	    kb.get_key()  # wait for SPACE to begin the trial
+	
+	else:
+	    # Trial is skipped: show a blank screen so the display is clean.
+	    c = Canvas(background_color='white')
+	    c.show()
+	__end__
+	___prepare__
+	pass
+	__end__
+
+define loop self_assess_loop
+	set source_file "ifst_files/self_assess_questions.xlsx"
+	set source file
+	set repeat 1
+	set order sequential
+	set description "Post-block self-assessment"
+	set cycles 1
+	set continuous no
+	set break_if_on_first yes
+	set break_if False
+	setcycle 0 empty_column ""
+	run self_assess_seq
+
+define inline_script self_assess_script
+	set description "Slider rating question"
+	___run__
+	# ---------------------------------------------------------------
+	# self_assess_script — Run phase
+	# Displays one self-assessment question (from self_assess_questions.xlsx)
+	# with a 0-10 visual analogue scale. The participant clicks a point
+	# on the scale, which highlights the selection, then clicks "Next".
+	#
+	# Called once per question row via self_assess_loop.
+	# The response is stored in var.sa_response (integer 0-10).
+	# ---------------------------------------------------------------
+	import textwrap
+	def _wrap(t, w=85):
+	    out = []
+	    for p in t.split('\n'):
+	        out.extend(textwrap.wrap(p, w) if p.strip() else [''])
+	    return '<br>'.join(out)
+	
+	# Reset trial-level carry-over variables so self-assessment rows
+	# in the CSV contain blanks in the trial columns (and vice versa).
+	var.crit_counter     = ''
+	var.feedback         = ''
+	var.key_presses      = ''
+	var.seq_acc          = ''
+	var.seq_typed        = ''
+	var.seq_resp_keys    = ''
+	var.seq_resp_rt      = ''
+	var.seq_time         = ''
+	var.sequence_code    = ''
+	var.sequence_type    = ''
+	var.stim             = ''
+	var.task_trial_count = ''
+	var.trial_type       = ''
+	
+	# Screen scale factor for proportional positioning.
+	sc = self.experiment.sc
+	
+	# --- Load the question text and anchor labels for the current language ---
+	lc        = var.lang_code
+	question  = getattr(var, 'self_assess_question_' + lc, var.self_assess_question_EN)
+	label_min = getattr(var, 'label_min_'             + lc, var.label_min_EN)
+	label_mid = getattr(var, 'label_middle_'          + lc, var.label_middle_EN)
+	label_max = getattr(var, 'label_max_'             + lc, var.label_max_EN)
+	
+	# --- Visual Analogue Scale geometry (all values scaled to screen) ---
+	scale_left  = int(-380 * sc)   # x-position of the left  end of the scale bar
+	scale_right = int( 380 * sc)   # x-position of the right end of the scale bar
+	scale_y     = int(  60 * sc)   # y-position of the scale bar (below centre)
+	tick_span   = scale_right - scale_left  # total pixel width of the scale
+	selected    = None              # currently selected value (0-10), or None
+	
+	def make_canvas(sel):
+	    c = Canvas()
+	    c.background_color = 'white'
+	
+	    # Question text, displayed above the scale bar.
+	    c['q'] = Text(_wrap(question), color='black',
+	                  x=0, y=int(-240*sc),
+	                  font_size=int(17*sc), html=True)
+	
+	    # Horizontal scale bar.
+	    c['line'] = Line(sx=scale_left, sy=scale_y,
+	                  ex=scale_right, ey=scale_y, color='black', penwidth=3)
+	
+	    # 11 tick marks at equal intervals (values 0 through 10).
+	    for i in range(11):
+	        tx = scale_left + i * tick_span // 10  # x-position of tick i
+	        c[f'tk{i}'] = Line(sx=tx, sy=scale_y - int(12*sc),
+	                     ex=tx, ey=scale_y + int(12*sc),
+	                     color='black', penwidth=2)
+	
+	    # Numeric labels at scale endpoints and midpoint.
+	    c['l0']  = Text('0',  color='black', x=scale_left,  y=scale_y + int(28*sc), font_size=int(16*sc))
+	    c['l5']  = Text('5',  color='black', x=0,           y=scale_y + int(28*sc), font_size=int(16*sc))
+	    c['l10'] = Text('10', color='black', x=scale_right, y=scale_y + int(28*sc), font_size=int(16*sc))
+	
+	    # Anchor labels (descriptive text at min, middle, and max).
+	    c['lmin'] = Text(label_min, color='black', x=scale_left,  y=scale_y + int(80*sc), font_size=int(14*sc))
+	    c['lmid'] = Text(label_mid, color='black', x=0,           y=scale_y + int(80*sc), font_size=int(14*sc))
+	    c['lmax'] = Text(label_max, color='black', x=scale_right, y=scale_y + int(80*sc), font_size=int(14*sc))
+	
+	    if sel is not None:
+	        # Filled circle highlights the currently selected tick.
+	        sx = scale_left + sel * tick_span // 10
+	        c['sel']      = Circle(x=sx, y=scale_y, r=int(12*sc),
+	                           color='#0055cc', fill=True)
+	        # "Next" button appears only after a value has been selected.
+	        c['next_box'] = Rect(x=int(-75*sc), y=int(200*sc),
+	                           w=int(150*sc), h=int(50*sc),
+	                           color='#888888', fill=True)
+	        c['next_lbl'] = Text(var.next_msg, color='white',
+	                           x=0, y=int(225*sc), font_size=int(20*sc))
+	    return c
+	
+	mouse = Mouse(visible=True)
+	make_canvas(selected).show()
+	
+	# --- Interaction loop: click scale to select, click Next to confirm ---
+	while True:
+	    btn, pos, _ = mouse.get_click()
+	    if pos is None:
+	        continue
+	    mx, my = pos
+	
+	    # Check whether the click is within the scale bar region (with tolerance).
+	    if scale_left - int(15*sc) <= mx <= scale_right + int(15*sc) \
+	                and abs(my - scale_y) <= int(35*sc):
+	        # Map the click x-position to the nearest integer tick value (0-10).
+	        tick     = round((mx - scale_left) / tick_span * 10)
+	        selected = max(0, min(10, tick))
+	        make_canvas(selected).show()
+	
+	    # Check whether the click is on the Next button.
+	    elif selected is not None \
+	                and int(-75*sc) <= mx <= int(75*sc) \
+	                and int(200*sc) <= my <= int(250*sc):
+	        break
+	
+	var.sa_response = selected  # integer 0-10
+	mouse.show_cursor(show=True)
+	__end__
+	___prepare__
+	pass
+	__end__
+
+define sequence self_assess_seq
+	set flush_keyboard yes
+	set description "One self-assessment question"
+	run self_assess_script True
+	run logger True
+
+define inline_script seq_fb_script
+	set description "Feedback + criterion check"
+	___run__
+	# ---------------------------------------------------------------
+	# seq_fb_script — Run phase
+	# Runs after each executed trial (guarded by run_if "[run_trial] = yes").
+	#
+	# Practice block:
+	#   - Displays colour-coded accuracy feedback and plays a sound.
+	#   - Increments the per-stimulus correct-trial counter.
+	#   - Sets end_block = yes when all stimuli reach target_per_stim.
+	#
+	# Task block:
+	#   - No feedback is shown to the participant.
+	#   - Increments task_trial_count; sets end_block = yes once the
+	#     expected number of trials (2 * n_reps) has been completed.
+	# ---------------------------------------------------------------
+	experiment = self.experiment
+	import os
+	import textwrap
+	def _wrap(t, w=60):
+	    out = []
+	    for p in t.split('\n'):
+	        out.extend(textwrap.wrap(p, w) if p.strip() else [''])
+	    return '<br>'.join(out)
+	
+	# Screen scale factor — named _sc to avoid shadowing sc = stim_counters
+	# used in the practice branch below.
+	_sc = experiment.sc
+	
+	if var.run_trial != 'yes':
+	    pass  # safe fallback; run_if should prevent this branch
+	
+	elif var.block_type == 'practice':
+	    # --- Practice feedback ---
+	    current_stim = int(var.stim)
+	    sc           = experiment.stim_counters  # per-stimulus correct-trial counters
+	    seq_acc      = int(var.seq_acc)           # 1 = correct, 0 = incorrect
+	    tgt          = int(var.target_per_stim)   # criterion: correct trials required
+	
+	    if seq_acc == 1:
+	        sc[current_stim] += 1  # increment only on a correct response
+	
+	    var.crit_counter = sc[current_stim]  # log running count for this stimulus
+	
+	    # Select message and accent colour based on trial type and accuracy.
+	    if var.trial_type == 'imagery':
+	        cond_color = 'purple'
+	        fb_msg = var.correct_ima_msg if seq_acc == 1 else var.incorrect_ima_msg
+	    else:
+	        cond_color = 'blue'
+	        fb_msg = var.correct_exe_msg if seq_acc == 1 else var.incorrect_exe_msg
+	
+	    fb_dur = 3000 if seq_acc == 1 else 5000  # correct: 3 s; incorrect: 5 s
+	
+	    # Compose feedback string: accuracy message + timing + criterion progress.
+	    fb_text = (fb_msg + '\n\n' +
+	        str(var.time_msg) + ': ' + str(var.seq_time) + ' ' +
+	        str(var.seconds_msg) + '\n\n' +
+	        str(var.correct_trials_msg) + str(sc[current_stim]) +
+	        ' ' + str(var.out_of_msg) + ' ' + str(tgt))
+	
+	    c = Canvas()
+	    c.background_color = 'white'
+	    c['fb'] = Text(_wrap(fb_text), color=cond_color,
+	                  x=0, y=0, font_size=int(20*_sc), html=True)
+	    c.show()
+	
+	    # Play auditory feedback sound (correct or incorrect).
+	    exp_dir  = experiment.experiment_path
+	    snd_name = 'correct_sound.wav' if seq_acc == 1 else 'incorrect_sound.wav'
+	    snd_path = os.path.join(exp_dir, 'ifst_stimuli', snd_name)
+	    snd = Sampler(snd_path)
+	    snd.play()
+	
+	    clock.sleep(fb_dur)  # hold feedback screen for the required duration
+	
+	    # Check whether all four stimuli have reached the criterion.
+	    if all(v >= tgt for v in sc.values()):
+	        var.end_block = 'yes'  # signal the trial loop to stop
+	
+	else:
+	    # --- Task block: no feedback shown; only update trial counter ---
+	    var.task_trial_count = int(var.task_trial_count) + 1
+	    # End the block once the expected number of trials is complete.
+	    # 2 * n_reps: one execution + one imagery trial per repeat.
+	    if var.task_trial_count >= 2 * int(var.n_reps):
+	        var.end_block = 'yes'
+	__end__
+	___prepare__
+	pass
+	__end__
+
+define loop seq_loop
+	set source_file "[conditions_file]"
+	set source file
+	set repeat 30
+	set order sequential
+	set description "Trial loop (practice: criterion; task: 1 cycle)"
+	set cycles 1
+	set continuous no
+	set break_if_on_first yes
+	set break_if "[end_block] = yes"
+	setcycle 0 empty_column ""
+	run trial_seq
+
+define inline_script seq_trial_script
+	set description "Core sequence trial"
+	___run__
+	# ---------------------------------------------------------------
+	# seq_trial_script — Run phase
+	# Core stimulus presentation and response collection for one trial.
+	#
+	# Displays:
+	#   - A colour-coded instruction prompt (top of screen)
+	#   - The sequence diagram image (centre)
+	#   - Four response boxes aligned with keys F G H J (bottom)
+	#
+	# Waits for exactly key_presses key presses. In practice (feedback=1)
+	# the box corresponding to the pressed key lights up briefly.
+	#
+	# Output variables (var.*)  written for logging:
+	#   seq_typed     : string of keys pressed in order
+	#   seq_acc       : 1 if sequence matches, 0 otherwise
+	#   seq_time      : time from first to last key press (seconds)
+	#   seq_resp_keys : semicolon-separated key labels
+	#   seq_resp_rt   : semicolon-separated RTs from trial onset (seconds)
+	# ---------------------------------------------------------------
+	experiment = self.experiment
+	kb = Keyboard(keylist=['f', 'g', 'h', 'j'], timeout=50)  # 50 ms poll interval
+	
+	if var.run_trial == 'yes':
+	    import os
+	    from PIL import Image as PILImage
+	
+	    trial_type    = var.trial_type
+	    sequence_code = var.sequence_code  # expected key sequence string
+	    key_presses   = int(var.key_presses)
+	    seq_pic       = var.sequence_picture
+	    do_feedback   = int(var.feedback)  # 1 in practice block, 0 in task blocks
+	
+	    # Colour-code by trial type: imagery = purple, execution = blue.
+	    if trial_type == 'imagery':
+	        prompt     = var.prompt_ima_msg
+	        cond_color = 'purple'
+	    else:
+	        prompt     = var.prompt_exe_msg
+	        cond_color = 'blue'
+	
+	    # Screen scale factor: all pixel positions below are multiplied by sc
+	    # so the layout proportionally fills any monitor resolution.
+	    sc = experiment.sc
+	
+	    # Response box geometry. Boxes sit below centre aligned with F G H J.
+	    # Design values (for 1024x768) are multiplied by sc for the actual screen.
+	    box_xs   = [int(x * sc) for x in [-115, -38, 38, 115]]  # box x-centres
+	    box_y    = int(307 * sc)   # y-position of the box row
+	    box_size = int(54  * sc)   # width and height of each response box
+	    key_map  = {'f': 0, 'g': 1, 'h': 2, 'j': 3}  # key label → box index
+	
+	    # Load the sequence diagram and compute a PIL scale so the image fits
+	    # inside a (img_target x img_target) pixel area at the centre of screen.
+	    img_path   = os.path.join(experiment.experiment_path, seq_pic)
+	    _pil       = PILImage.open(img_path)
+	    img_target = int(307 * sc)  # target bounding box size (scaled)
+	    _scale     = min(img_target / _pil.size[0], img_target / _pil.size[1])
+	
+	    # Build the stimulus canvas.
+	    canvas_seq = Canvas(background_color='white')
+	    # Instruction prompt near the top of the screen.
+	    canvas_seq['prompt']  = Text(prompt, color=cond_color,
+	                               x=0, y=int(-307*sc), font_size=int(22*sc))
+	    # Central fixation dot (rendered beneath the image).
+	    canvas_seq['fix']     = FixDot(x=0, y=0, color='white')
+	    # Sequence diagram image centred on screen.
+	    canvas_seq['seq_img'] = Image(img_path, x=0, y=0, scale=_scale)
+	    # Four response boxes (dark; lit up on key press when feedback is on).
+	    for i, bx in enumerate(box_xs):
+	        canvas_seq[f'box_{i}'] = Rect(
+	            x=bx - box_size//2, y=box_y - box_size//2,
+	            w=box_size, h=box_size, color='black', fill=True, penwidth=2)
+	
+	    # --- Response collection ---
+	    keys_pressed = []   # ordered list of keys pressed
+	    rts_ms       = []   # experiment-clock timestamps of each key press (ms)
+	    key_count    = 0    # number of keys collected so far
+	    last_key_t   = -9999  # timestamp of most recent key press
+	
+	    t_start = clock.time()  # trial onset timestamp
+	    canvas_seq.show()
+	
+	    while key_count < key_presses:
+	        key, t = kb.get_key()   # non-blocking poll (50 ms timeout)
+	        now    = clock.time()
+	
+	        if key is not None:
+	            key_count += 1
+	            keys_pressed.append(key)
+	            rts_ms.append(t)
+	            last_key_t = t
+	
+	            if do_feedback:
+	                # Light up the pressed key box; clear all others.
+	                for i in range(4):
+	                    canvas_seq[f'box_{i}'].color = 'black'
+	                idx = key_map.get(key, -1)
+	                if idx >= 0:
+	                    canvas_seq[f'box_{idx}'].color = 'white'
+	                canvas_seq.show()
+	
+	        # After 100 ms of silence, reset all boxes to dark.
+	        if last_key_t > 0 and (now - last_key_t) >= 100:
+	            for i in range(4):
+	                canvas_seq[f'box_{i}'].color = 'black'
+	            last_key_t = -9999
+	            if do_feedback:
+	                canvas_seq.show()
+	
+	    # --- Compute accuracy and timing ---
+	    seq_typed = ''.join(keys_pressed)
+	    seq_acc   = 1 if seq_typed == sequence_code else 0
+	    # seq_time: interval from first to last key press.
+	    # Returns 999.0 sentinel if fewer than 2 presses were collected.
+	    if len(rts_ms) >= key_presses and key_presses > 1:
+	        seq_time = round((rts_ms[-1] - rts_ms[0]) / 1000.0, 3)
+	    else:
+	        seq_time = 999.0
+	
+	    # Store results in experiment variables for the logger.
+	    var.seq_typed     = seq_typed
+	    var.seq_acc       = seq_acc
+	    var.seq_time      = seq_time
+	    var.seq_resp_keys = ';'.join(keys_pressed)  # semicolons avoid CSV column breaks
+	    var.seq_resp_rt   = ';'.join(str(round((r - t_start)/1000.0, 4)) for r in rts_ms)
+	
+	else:
+	    # Trial is skipped (run_trial = no): write sentinel values.
+	    var.seq_typed     = 'skipped'
+	    var.seq_acc       = -1
+	    var.seq_time      = -1
+	    var.seq_resp_keys = ''
+	    var.seq_resp_rt   = ''
+	__end__
+	set _prepare pass
+
+define sequence trial_seq
+	set flush_keyboard yes
+	set description "Pre-trial + trial + feedback"
+	run pre_trial_script True
+	run seq_trial_script "[run_trial] = yes"
+	run seq_fb_script "[run_trial] = yes"
+	run logger "[run_trial] = yes"
+
+define inline_script welcome_script
+	set description "Welcome + handedness selection"
+	___run__
+	# ---------------------------------------------------------------
+	# welcome_script — Run phase
+	# Displays the welcome screen with the experiment title, a brief
+	# welcome message, and two buttons for handedness selection.
+	#
+	# Sets var.handedness and var.conditions_file based on the choice,
+	# which determines which conditions file is used throughout.
+	# ---------------------------------------------------------------
+	experiment = self.experiment
+	
+	# Screen scale factor for proportional positioning.
+	sc = experiment.sc
+	
+	# Button dimensions and horizontal centres (scaled).
+	btn_w = int(200 * sc)
+	btn_h = int(70  * sc)
+	lx = int(-220 * sc)  # x-centre of the Left  button
+	rx = int( 220 * sc)  # x-centre of the Right button
+	
+	c = Canvas()
+	c.background_color = 'white'
+	c['title']     = Text(var.title_msg, color='black',
+	                 x=0, y=int(-270*sc), font_size=int(28*sc))
+	c['welcome']   = Text(var.welcome_msg.replace('\n', '<br>'), color='black',
+	                 x=0, y=int(-120*sc), font_size=int(18*sc), html=True)
+	c['hand_q']    = Text(var.handedness_msg, color='black',
+	                 x=0, y=int(30*sc), font_size=int(22*sc))
+	c['btn_left']  = Rect(x=lx - btn_w//2, y=int(110*sc),
+	                 w=btn_w, h=btn_h, color='#888888', fill=True)
+	c['btn_right'] = Rect(x=rx - btn_w//2, y=int(110*sc),
+	                 w=btn_w, h=btn_h, color='#888888', fill=True)
+	c['lbl_left']  = Text(var.left_handed_msg,  color='white',
+	                 x=lx, y=int(145*sc), font_size=int(22*sc))
+	c['lbl_right'] = Text(var.right_handed_msg, color='white',
+	                 x=rx, y=int(145*sc), font_size=int(22*sc))
+	c.show()
+	
+	# --- Wait for a mouse click on one of the handedness buttons ---
+	mouse = Mouse(visible=True)
+	while True:
+	    btn, pos, _ = mouse.get_click()
+	    if pos is None:
+	        continue
+	    mx, my = pos
+	    # Hit-test for the Left-handed button.
+	    if (lx - btn_w//2) <= mx <= (lx + btn_w//2) \
+	                and int(110*sc) <= my <= int(110*sc) + btn_h:
+	        var.handedness      = 'left'
+	        var.conditions_file = 'ifst_files/conditions_left.xlsx'
+	        break
+	    # Hit-test for the Right-handed button.
+	    if (rx - btn_w//2) <= mx <= (rx + btn_w//2) \
+	                and int(110*sc) <= my <= int(110*sc) + btn_h:
+	        var.handedness      = 'right'
+	        var.conditions_file = 'ifst_files/conditions_right.xlsx'
+	        break
+	mouse.show_cursor(show=False)
+	__end__
+	___prepare__
+	pass
+	__end__
+
