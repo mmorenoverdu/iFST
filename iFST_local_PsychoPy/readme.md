@@ -1,6 +1,6 @@
 # IMAGINED FINGER SEQUENCE TASK (iFST) — Local version (PsychoPy)
 
-**Author:** Marcos Moreno Verdú  
+**Author:** Marcos Moreno Verdú, 08/07/2026  
 **Software:** PsychoPy 2025.2.4 or later  
 **Experiment type:** Local (runs on the experimenter's computer)  
 **Languages supported:** English (EN) · Spanish (ES) · French (FR) · German (DE)
