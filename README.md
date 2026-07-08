@@ -16,14 +16,17 @@ An example of the setup is shown below.
 ## Repository information
 This repository has two main folders, which contain **PsychoPy** experiments (`.psyexp`), together with associated files to run them **locally** (lab/desktop experiments) or **online** (in a browser). 
 Please consult the accompanying manuscript [Moreno-Verdú et al., 2026](https://link.springer.com/article/10.3758/s13428-026-03002-3) on the [Movement Imagery Ability Task Platform](https://movementimageryability.github.io/) for a guide on necessary steps to run a task in each of the deployment modes, which can help with the decision.
-- [iFST PsychoPy local](/iFST_local)
-- [iFST PsychoPy online](/iFST_online)
+- [iFST PsychoPy local](/iFST_local_PsychoPy)
+- [iFST PsychoPy online](/iFST_online_PsychoPy)
+- [iFST OpenSesame local](/iFST_local_OpenSesame)
+- [iFST OpenSesame online](/iFST_online_OpenSesame)
 
 The version provided in this repository may allow flexibility in terms of key task parameters of the iFST:
 - types of sequences
 - number of sequences
 - length of sequences
 - repetitions
+- feedback provision
 
 The optimal protocol is at the user's discretion, but sensible defaults have been implemented.
 
