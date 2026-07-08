@@ -1,6 +1,6 @@
 # IMAGINED FINGER SEQUENCE TASK (iFST) — Online version (PsychoPy / Pavlovia)
 
-**Author:** Marcos Moreno Verdú  
+**Author:** Marcos Moreno Verdú, 08/07/2026  
 **Software:** PsychoPy 2025.2.4 or later · Deployed via [Pavlovia](https://pavlovia.org/)  
 **Experiment type:** Online (browser-based, via Pavlovia)  
 **Languages supported:** English (EN) · Spanish (ES) · French (FR) · German (DE)
