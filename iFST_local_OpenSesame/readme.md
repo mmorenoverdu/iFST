@@ -1,6 +1,6 @@
 # IMAGINED FINGER SEQUENCE TASK (iFST) — Local version (OpenSesame / PsychoPy)
 
-**Author:** Marcos Moreno Verdú  
+**Author:** Marcos Moreno Verdú, 08/07/2026  
 **Software:** OpenSesame 4.1.9 · psycho (PsychoPy) backend  
 **Experiment type:** Local (runs on the experimenter's computer)  
 **Languages supported:** English (EN) · Spanish (ES) · French (FR) · German (DE)
