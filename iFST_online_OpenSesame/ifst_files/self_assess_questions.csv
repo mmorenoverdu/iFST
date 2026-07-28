@@ -1,82 +1,82 @@
-self_assess_construct,self_assess_question_EN,label_min_EN,label_middle_EN,label_max_EN,self_assess_question_ES,label_min_ES,label_middle_ES,label_max_ES,self_assess_question_FR,label_min_FR,label_middle_FR,label_max_FR,self_assess_question_DE,label_min_DE,label_middle_DE,label_max_DE
-inst_check,"Please, respond the following questions about the imagery you performed in the LAST block.
+self_assess_question_EN,label_min_EN,label_middle_EN,label_max_EN,self_assess_question_ES,label_min_ES,label_middle_ES,label_max_ES,self_assess_question_FR,label_min_FR,label_middle_FR,label_max_FR,self_assess_question_DE,label_min_DE,label_middle_DE,label_max_DE
+"Please, respond the following questions about the imagery you performed in the LAST block.
 Use the mouse.
 
 In the last block, the INSTRUCTION when IMAGINING the movement was to use:","A visual
 modality only","Both modalities
 at the same time","A kinesthetic
-modality only","Por favor, responde las siguientes preguntas sobre la imaginerÃ­a que has realizado en el ÃšLTIMO bloque.
-Usa el ratÃ³n.
+modality only","Por favor, responde las siguientes preguntas sobre la imaginería que has realizado en el ÚLTIMO bloque.
+Usa el ratón.
 
-En el Ãºltimo bloque la INSTRUCCIÃ“N durante la imaginaciÃ³n fue que usaras:","La modalidad visual
-Ãºnicamente","Ambas modalidades
-a la vez","La modalidad cinestÃ©sica
-Ãºnicamente","Veuillez rÃ©pondre aux questions suivantes concernant l'imagerie que vous avez rÃ©alisÃ©e dans le DERNIER bloc.
+En el último bloque la INSTRUCCIÓN durante la imaginación fue que usaras:","La modalidad visual
+únicamente","Ambas modalidades
+a la vez","La modalidad cinestésica
+únicamente","Veuillez répondre aux questions suivantes concernant l'imagerie que vous avez réalisée dans le DERNIER bloc.
 Utilisez la souris.
 
-Dans le dernier bloc, l'INSTRUCTION pour IMAGINER le mouvement Ã©tait d'utiliser :","Une modalitÃ© visuelle
-uniquement","Les deux modalitÃ©s
-en mÃªme temps","Une modalitÃ© kinesthÃ©sique
-uniquement","Bitte beantworten Sie die folgenden Fragen zur Vorstellung, die Sie im LETZTEN Block ausgefÃ¼hrt haben.
+Dans le dernier bloc, l'INSTRUCTION pour IMAGINER le mouvement était d'utiliser :","Une modalité visuelle
+uniquement","Les deux modalités
+en même temps","Une modalité kinesthésique
+uniquement","Bitte beantworten Sie die folgenden Fragen zu Ihrer Vorstellung im LETZTEN Block.
 Verwenden Sie die Maus.
 
-Im letzten Block lautete die ANWEISUNG beim VORSTELLEN der Bewegung, folgende ModalitÃ¤t zu verwenden:",Nur eine visuelle ModalitÃ¤t,"Beide ModalitÃ¤ten
-gleichzeitig",Nur eine kinÃ¤sthetische ModalitÃ¤t
-overall_vividness,"When imagining the movement, what was the OVERALL VIVIDNESS (considering BOTH the clarity of the image AND the intensity of the sensations)? Only if you did not feel or see anything at all, then select 0.","No image at all, you only
+Im letzten Block lautete die ANWEISUNG beim VORSTELLEN der Bewegung, folgende Modalität zu verwenden:",Nur eine visuelle Modalität,"Beide Modalitäten
+gleichzeitig",Nur eine kinästhetische Modalität
+"When imagining the movement, what was the OVERALL VIVIDNESS (considering BOTH the clarity of the image AND the intensity of the sensations)? Only if you did not feel or see anything at all, then select 0.","No image at all, you only
 ""know"" that you were
 thinking of the movement",  ,"Perfectly clear and vivid as
 normal vision and/or
-feel of movement","Al imaginar el movimiento,  Â¿cuÃ¡l fue tu VIVEZA GENERAL (considerando TANTO la claridad de la imaginen COMO la intensidad de las sensaciones)? Solo si no has visto o sentido nada, selecciona 0.","Ninguna imagen,
+feel of movement","Al imaginar el movimiento,  ¿cuál fue tu VIVEZA GENERAL (considerando TANTO la claridad de la imaginen COMO la intensidad de las sensaciones)? Solo si no has visto o sentido nada, selecciona 0.","Ninguna imagen,
 solo ""sabes"" que
-pensabas sobre la acciÃ³n", ,"Perfectamente clara y
-tan vÃ­vida como ver y
-sentir el movimiento","Lorsque vous avez imaginÃ© le mouvement, quelle Ã©tait la VIVACITÃ‰ GÃ‰NÃ‰RALE (en tenant compte Ã€ LA FOIS de la clartÃ© de l'image ET de l'intensitÃ© des sensations) ? Si vous n'avez rien ressenti ni vu du tout, sÃ©lectionnez 0.","Aucune image, vous savez
+pensabas sobre la acción", ,"Perfectamente clara y
+tan vívida como ver y
+sentir el movimiento","Lorsque vous avez imaginé le mouvement, quelle était la VIVACITÉ GÉNÉRALE (en tenant compte À LA FOIS de la clarté de l'image ET de l'intensité des sensations) ? Si vous n'avez rien ressenti ni vu du tout, sélectionnez 0.","Aucune image, vous savez
 seulement que vous
 pensiez au mouvement.", ,"Parfaitement clair et net
 comme une vision normale
-et/ou sensation de mouvement","Wie lebhaft war die Vorstellung der Bewegung INSGESAMT (unter BerÃ¼cksichtigung SOWOHL der Klarheit des Bildes ALS AUCH der IntensitÃ¤t der Empfindungen)? WÃ¤hlen Sie nur dann 0, wenn Sie Ã¼berhaupt nichts gesehen oder gefÃ¼hlt haben.","Kein Bild Ã¼berhaupt, Sie â€žwusstenâ€œ nur, dass Sie an die Bewegung gedacht haben",   ,"Vollkommen klar und lebhaft, wie normales Sehen und/oder das normale GefÃ¼hl einer Bewegung"
-imagined_errors,"When imagining the movement, did you imagine yourself making errors (e.g. pressing the wrong key)? Only if you imagined NO ERRORS in the WHOLE BLOCK, then select 0.","No errors, I was
+et/ou sensation de mouvement","Wie lebhaft war die Vorstellung der Bewegung INSGESAMT (unter Berücksichtigung SOWOHL der Klarheit des Bildes ALS AUCH der Intensität der Empfindungen)? Wählen Sie nur dann 0, wenn Sie überhaupt nichts gesehen oder gefühlt haben.","Überhaupt kein Bild, Sie „wussten“ nur, dass Sie an die Bewegung gedacht haben",   ,"Vollkommen klar und lebhaft, wie normales Sehen und/oder das normale Gefühl einer Bewegung"
+"When imagining the movement, did you imagine yourself making errors (e.g. pressing the wrong key)? Only if you imagined NO ERRORS in the WHOLE BLOCK, then select 0.","No errors, I was
 completely accurate
 during imagery",  ,"A lot of errors, I was
 completely inaccurate
-during imagery","Al imaginar el movimiento,  Â¿lo has imaginado cometiendo errores (es decir, presionar la tecla incorrecta)? Solo si no has imaginado NINGÃšN ERROR en TODO el bloque, selecciona 0.","Sin errores,
+during imagery","Al imaginar el movimiento,  ¿lo has imaginado cometiendo errores (es decir, presionar la tecla incorrecta)? Solo si no has imaginado NINGÚN ERROR en TODO el bloque, selecciona 0.","Sin errores,
 completeamente
 preciso/a", ,"Muchos errores,
 completamente
-impreciso/a","Lorsque vous avez imaginÃ© le mouvement, vous Ãªtes-vous imaginÃ© en train de faire des erreurs (par exemple, appuyer sur la mauvaise touche) ? Seulement si vous n'avez imaginÃ© AUCUNE ERREUR dans TOUT LE BLOC, sÃ©lectionnez 0.","Aucune erreur, j'Ã©tais
-tout Ã  fait prÃ©cis
-pendant l'imagerie.",  ,"Beaucoup d'erreurs, j'Ã©tais
-complÃ¨tement inexact
-pendant l'imagerie","Haben Sie sich beim Vorstellen der Bewegung Fehler vorgestellt (z. B. die falsche Taste gedrÃ¼ckt)? WÃ¤hlen Sie nur dann 0, wenn Sie sich im GESAMTEN BLOCK KEINE FEHLER vorgestellt haben.","Keine Fehler, ich war wÃ¤hrend der Vorstellung vollstÃ¤ndig korrekt",   ,"Viele Fehler, ich war wÃ¤hrend der Vorstellung vÃ¶llig ungenau"
-visual_use,"When imagining the movement, what was your use of the VISUAL MODALITY of imagery (creating a visual image of the movement)? Only if you did not use visual imagery at all, select ""0"".","No visual
+impreciso/a","Lorsque vous avez imaginé le mouvement, vous êtes-vous imaginé en train de faire des erreurs (par exemple, appuyer sur la mauvaise touche) ? Seulement si vous n'avez imaginé AUCUNE ERREUR dans TOUT LE BLOC, sélectionnez 0.","Aucune erreur, j'étais
+tout à fait précis
+pendant l'imagerie.",  ,"Beaucoup d'erreurs, j'étais
+complètement inexact
+pendant l'imagerie","Haben Sie sich beim Vorstellen der Bewegung Fehler vorgestellt (z. B. die falsche Taste gedrückt)? Wählen Sie nur dann 0, wenn Sie sich im GESAMTEN BLOCK KEINE FEHLER vorgestellt haben.","Keine Fehler, ich war während der Vorstellung vollständig korrekt",   ,"Viele Fehler, ich war während der Vorstellung völlig ungenau"
+"When imagining the movement, what was your use of the VISUAL MODALITY of imagery (creating a visual image of the movement)? Only if you did not use visual imagery at all, select ""0"".","No visual
 imagery use",  ,"High visual
-imagery use","Al imaginar el movimiento, Â¿cuÃ¡l ha sido tu uso de la modalidad VISUAL (crear una imagen visual del moviemiento)? Solo si no has usado NADA la modalidad visual, selecciona 0.","NingÃºn uso de la
+imagery use","Al imaginar el movimiento, ¿cuál ha sido tu uso de la modalidad VISUAL (crear una imagen visual del moviemiento)? Solo si no has usado NADA la modalidad visual, selecciona 0.","Ningún uso de la
 modalidad visual", ,"Uso alto de la
-modalidad visual","Lorsque vous avez imaginÃ© le mouvement, comment avez-vous utilisÃ© la MODALITÃ‰ VISUELLE de l'imagerie (crÃ©ation d'une image visuelle du mouvement) ? Si vous n'avez pas utilisÃ© du tout l'imagerie visuelle, sÃ©lectionnez Â« 0 Â».","Pas d'utilisation
+modalidad visual","Lorsque vous avez imaginé le mouvement, comment avez-vous utilisé la MODALITÉ VISUELLE de l'imagerie (création d'une image visuelle du mouvement) ? Si vous n'avez pas utilisé du tout l'imagerie visuelle, sélectionnez « 0 ».","Pas d'utilisation
 d'images visuelles", ,"Utilisation intensive
-d'images visuelles","Wie stark haben Sie beim Vorstellen der Bewegung die VISUELLE MODALITÃ„T der Vorstellung genutzt (ein visuelles Bild der Bewegung erzeugt)? WÃ¤hlen Sie nur dann â€ž0â€œ, wenn Sie visuelle Vorstellung Ã¼berhaupt nicht genutzt haben.",Keine Nutzung visueller Vorstellung,   ,Hohe Nutzung visueller Vorstellung
-first_person_use,"If you used visual imagery, did you use a FIRST-PERSON PERSPECTIVE (watching the movement through the eyes of the performer, from an internal point of view)? If you selected 0 in the question before, then you must select 0 here as well.","No first-person (internal)
+d'images visuelles","Wie stark haben Sie beim Vorstellen der Bewegung die VISUELLE MODALITÄT der Vorstellung genutzt (ein visuelles Bild der Bewegung erzeugt)? Wählen Sie nur dann „0“, wenn Sie visuelle Vorstellung überhaupt nicht genutzt haben.",Keine Nutzung visueller Vorstellung,   ,Starke Nutzung visueller Vorstellung
+"If you used visual imagery, did you use a FIRST-PERSON PERSPECTIVE (watching the movement through the eyes of the performer, from an internal point of view)? If you selected 0 in the question before, then you must select 0 here as well.","No first-person (internal)
 perspective use",  ,"High first-person (internal)
-perspective use","Si has usado la modalidad visual, Â¿cuÃ¡l ha sido el uso de la PERSPETIVA EN PRIMERA PERSONA (ver el movimiento a travÃ©s de los ojos de la persona que lo realiza, desde una perspectiva interna)? Si has seleccionado 0 en la pregunta previa, debes seleccionar 0 aquÃ­ tambiÃ©n.","NingÃºn uso de la
+perspective use","Si has usado la modalidad visual, ¿cuál ha sido el uso de la PERSPETIVA EN PRIMERA PERSONA (ver el movimiento a través de los ojos de la persona que lo realiza, desde una perspectiva interna)? Si has seleccionado 0 en la pregunta previa, debes seleccionar 0 aquí también.","Ningún uso de la
 perspectiva interna", ,"Uso alto de la
-perspectiva interna","Si vous avez utilisÃ© des images visuelles, avez-vous utilisÃ© une PERSPECTIVE Ã€ LA PREMIÃˆRE PERSONNE (en observant le mouvement Ã  travers les yeux de l'interprÃ¨te, d'un point de vue interne) ? Si vous avez sÃ©lectionnÃ© 0 dans la question prÃ©cÃ©dente, vous devez Ã©galement sÃ©lectionner 0 ici.","Pas d'utilisation de la
-perspective Ã  la premiÃ¨re
+perspectiva interna","Si vous avez utilisé des images visuelles, avez-vous utilisé une PERSPECTIVE À LA PREMIÈRE PERSONNE (en observant le mouvement à travers les yeux de l'interprète, d'un point de vue interne) ? Si vous avez sélectionné 0 dans la question précédente, vous devez également sélectionner 0 ici.","Pas d'utilisation de la
+perspective à la première
 personne (interne)", ,"Utilisation intensive de la
-perspective Ã  la premiÃ¨re
-personne (interne)","Falls Sie visuelle Vorstellung genutzt haben: Haben Sie eine ERSTE-PERSON-PERSPEKTIVE verwendet (die Bewegung durch die Augen der ausfÃ¼hrenden Person gesehen, aus einer internen Perspektive)? Wenn Sie in der vorherigen Frage 0 gewÃ¤hlt haben, mÃ¼ssen Sie hier ebenfalls 0 wÃ¤hlen.",Keine Nutzung der Ich-Perspektive (intern),   ,Hohe Nutzung der Ich-Perspektive (intern)
-third_person_use,"If you used visual imagery, did you use a THIRD-PERSON PERSPECTIVE (watching yourself performing the movement, from an external point of view)? If you selected 0 in the question about general visual imagery use, then you must select 0 here as well.","No third-person (external)
+perspective à la première
+personne (interne)","Falls Sie visuelle Vorstellung genutzt haben: Haben Sie eine ERSTE-PERSON-PERSPEKTIVE verwendet (die Bewegung durch die Augen der ausführenden Person gesehen, aus einer internen Perspektive)? Wenn Sie in der vorherigen Frage 0 gewählt haben, müssen Sie hier ebenfalls 0 wählen.",Keine Nutzung der Ich-Perspektive (intern),   ,Starke Nutzung der Ich-Perspektive (intern)
+"If you used visual imagery, did you use a THIRD-PERSON PERSPECTIVE (watching yourself performing the movement, from an external point of view)? If you selected 0 in the question about general visual imagery use, then you must select 0 here as well.","No third-person (external)
 perspective use",  ,"High third-person (external)
-perspective use","Si has usado la modalidad visual, Â¿cuÃ¡l ha sido el uso de la PERSPETIVA EN TERCERA PERSONA (verte a ti mismo/a realizar el movimiento desde fuera, desde una perspectiva externa)? Si has seleccionado 0 en la pregunta sobre el uso de la modalidad visual, debes seleccionar 0 aquÃ­ tambiÃ©n.","NingÃºn uso de la
+perspective use","Si has usado la modalidad visual, ¿cuál ha sido el uso de la PERSPETIVA EN TERCERA PERSONA (verte a ti mismo/a realizar el movimiento desde fuera, desde una perspectiva externa)? Si has seleccionado 0 en la pregunta sobre el uso de la modalidad visual, debes seleccionar 0 aquí también.","Ningún uso de la
 perspectiva externa", ,"Uso alto de la
-perspectiva externa","Si vous avez utilisÃ© l'imagerie mentale, avez-vous utilisÃ© une PERSPECTIVE Ã€ LA TROISIÃˆME PERSONNE (en vous observant effectuer le mouvement d'un point de vue extÃ©rieur) ? Si vous avez sÃ©lectionnÃ© 0 dans la question sur l'utilisation gÃ©nÃ©rale de l'imagerie mentale, vous devez Ã©galement sÃ©lectionner 0 ici.","Pas d'utilisation de la
-perspective Ã  la troisiÃ¨me
+perspectiva externa","Si vous avez utilisé l'imagerie mentale, avez-vous utilisé une PERSPECTIVE À LA TROISIÈME PERSONNE (en vous observant effectuer le mouvement d'un point de vue extérieur) ? Si vous avez sélectionné 0 dans la question sur l'utilisation générale de l'imagerie mentale, vous devez également sélectionner 0 ici.","Pas d'utilisation de la
+perspective à la troisième
 personne (externe)", ,"Utilisation intensive de la
-perspective Ã  la troisiÃ¨me
-personne (externe)","Falls Sie visuelle Vorstellung genutzt haben: Haben Sie eine DRITTE-PERSON-PERSPEKTIVE verwendet (sich selbst bei der AusfÃ¼hrung der Bewegung beobachtet, aus einer externen Perspektive)? Wenn Sie in der Frage zur allgemeinen Nutzung visueller Vorstellung 0 gewÃ¤hlt haben, mÃ¼ssen Sie hier ebenfalls 0 wÃ¤hlen.",Keine Nutzung der Dritte-Person-Perspektive (extern),   ,Hohe Nutzung der Dritte-Person-Perspektive (extern)
-kine_use,"When imagining the movement, what was your use of the KINESTHETIC MODALITY of imagery (feeling the sensations of the movement)? Only if you did not use kinesthetic imagery at all, select ""0"".","No kinesthetic
+perspective à la troisième
+personne (externe)","Falls Sie visuelle Vorstellung genutzt haben: Haben Sie eine DRITTE-PERSON-PERSPEKTIVE verwendet (sich selbst bei der Ausführung der Bewegung beobachtet, aus einer externen Perspektive)? Wenn Sie in der Frage zur allgemeinen Nutzung visueller Vorstellung 0 gewählt haben, müssen Sie hier ebenfalls 0 wählen.",Keine Nutzung der Dritte-Person-Perspektive (extern),   ,Starke Nutzung der Dritte-Person-Perspektive (extern)
+"When imagining the movement, what was your use of the KINESTHETIC MODALITY of imagery (feeling the sensations of the movement)? Only if you did not use kinesthetic imagery at all, select ""0"".","No kinesthetic
 imagery use",  ,"High kinesthetic
-imagery use","Al imaginar el movimiento, Â¿cuÃ¡l ha sido tu uso de la modalidad CINESTÃ‰SICA (sentir las sensaciones asociadas al movimiento)? Solo si no has usado NADA la modalidad cinestÃ©sica, selecciona 0.","NingÃºn uso de la
-modalidad cinestÃ©sica", ,"Uso alto de la
-modalidad cinestÃ©sica","Lorsque vous avez imaginÃ© le mouvement, dans quelle mesure avez-vous utilisÃ© la MODALITÃ‰ KINESTHÃ‰TIQUE de l'imagerie (ressentir les sensations du mouvement) ? Ne sÃ©lectionnez Â« 0 Â» que si vous n'avez pas du tout utilisÃ© l'imagerie cinesthÃ©sique.","Pas d'utilisation
-d'images kinesthÃ©siques", ,"Utilisation intensive de
-l'imagerie kinesthÃ©sique","Wie stark haben Sie beim Vorstellen der Bewegung die KINÃ„STHETISCHE MODALITÃ„T der Vorstellung genutzt (die Empfindungen der Bewegung gespÃ¼rt)? WÃ¤hlen Sie nur dann â€ž0â€œ, wenn Sie kinÃ¤sthetische Vorstellung Ã¼berhaupt nicht genutzt haben.",Keine Nutzung kinÃ¤sthetischer Vorstellung,   ,Hohe Nutzung kinÃ¤sthetischer Vorstellung
+imagery use","Al imaginar el movimiento, ¿cuál ha sido tu uso de la modalidad CINESTÉSICA (sentir las sensaciones asociadas al movimiento)? Solo si no has usado NADA la modalidad cinestésica, selecciona 0.","Ningún uso de la
+modalidad cinestésica", ,"Uso alto de la
+modalidad cinestésica","Lorsque vous avez imaginé le mouvement, dans quelle mesure avez-vous utilisé la MODALITÉ KINESTHÉTIQUE de l'imagerie (ressentir les sensations du mouvement) ? Ne sélectionnez « 0 » que si vous n'avez pas du tout utilisé l'imagerie cinesthésique.","Pas d'utilisation
+d'images kinesthésiques", ,"Utilisation intensive de
+l'imagerie kinesthésique","Wie stark haben Sie beim Vorstellen der Bewegung die KINÄSTHETISCHE MODALITÄT der Vorstellung genutzt (die Empfindungen der Bewegung gespürt)? Wählen Sie nur dann „0“, wenn Sie kinästhetische Vorstellung überhaupt nicht genutzt haben.",Keine Nutzung kinästhetischer Vorstellung,   ,Starke Nutzung kinästhetischer Vorstellung
