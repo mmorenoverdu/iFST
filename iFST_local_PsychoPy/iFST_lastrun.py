@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2025.2.4),
-    on July 08, 2026, at 11:09
+    on August 11, 2026, at 09:43
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -53,8 +53,6 @@ expInfo = {
     'participant': f"{randint(0, 999999):06.0f}",
     'session': '001',
     'language': ["English", "Spanish", "French", "German"],
-    'age': '',
-    'gender': ["Female", "Male", "Non-binary", "Trans-gender", "Other", "Prefer not to say"],
     'date|hid': data.getDateStr(),
     'expName|hid': expName,
     'expVersion|hid': expVersion,
@@ -421,7 +419,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     task_blocks = 2 # number of task blocks
     total_blocks = practice_blocks + task_blocks
     ##### IMPORTANT VARIABLE #######
-    n_reps = 1  # repetitions per task block
+    n_reps = 10  # repetitions per task block
     ################################
     # placeholder variables:
     reps_per_block = 1 # variable to control reps in a block
@@ -722,6 +720,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # --- Initialize components for Routine "instructions" ---
     # Run 'Begin Experiment' code from inst_code
     inst_msg = ""
+    text_wrap = 0.8
     task_title = visual.TextStim(win=win, name='task_title',
         text='',
         font='Arial',
@@ -732,7 +731,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     inst_text = visual.TextStim(win=win, name='inst_text',
         text='',
         font='Arial',
-        pos=[0,0], draggable=False, height=0.025, wrapWidth=None, ori=0.0, 
+        pos=[0,0], draggable=False, height=0.025, wrapWidth=text_wrap, ori=0.0, 
         color=[-1.0000, -1.0000, -1.0000], colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
