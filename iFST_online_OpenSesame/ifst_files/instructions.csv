@@ -1,5 +1,5 @@
 hand,inst_pic,image_w,image_h,text_x,inst_msg_EN,inst_msg_ES,inst_msg_FR,inst_msg_DE
-right,images/seq_right.png,0,0,0,"In this task you will type or imagine typing two 8-digit sequences with your RIGHT hand. Sometimes you will PHYSICALLY type the sequence. Other times you will only IMAGINE typing the sequence. During imagery, you will be asked to focus on BOTH the: 
+right,ifst_images/seq_right.png,0,0,0,"In this task you will type or imagine typing two 8-digit sequences with your RIGHT hand. Sometimes you will PHYSICALLY type the sequence. Other times you will only IMAGINE typing the sequence. During imagery, you will be asked to focus on BOTH the: 
 
 VISUAL aspects of the movement (i.e. imagining SEEING your fingers moving from an INTERNAL point of view or FIRST-PERSON perspective)
 
@@ -24,7 +24,7 @@ VISUELLE Aspekte der Bewegung (d. h. sich vorzustellen, wie Sie Ihre Finger aus 
 KINÄSTHETISCHE Aspekte der Bewegung (d. h. sich vorzustellen, wie sich das Zussammenziehen Ihrer Muskeln und Bewegen Ihrer Gelenke anfühlt)
 
 Bitte versuchen Sie immer, sich auf BEIDE ASPEKTE GLEICHZEITIG zu konzentrieren, auch wenn sich dies nicht natürlich anfühlt. Falls Ihnen dies schwergefallen ist, haben Sie nach der Aufgabe die Möglichkeit, Ihre Erfahrung zu erläutern."
-left,images/seq_left.png,0,0,0,"In this task you will type or imagine typing two 8-digit sequences with your LEFT hand. Sometimes you will PHYSICALLY type the sequence. Other times you will only IMAGINE typing the sequence. During imagery, you will be asked to focus on BOTH the: 
+left,ifst_images/seq_left.png,0,0,0,"In this task you will type or imagine typing two 8-digit sequences with your LEFT hand. Sometimes you will PHYSICALLY type the sequence. Other times you will only IMAGINE typing the sequence. During imagery, you will be asked to focus on BOTH the: 
 
 VISUAL aspects of the movement (i.e. imagining SEEING your fingers moving from an INTERNAL point of view or FIRST-PERSON perspective)
 
@@ -49,7 +49,7 @@ VISUELLE Aspekte der Bewegung (d. h. sich vorzustellen, wie Sie Ihre Finger aus 
 KINÄSTHETISCHE Aspekte der Bewegung (d. h. sich vorzustellen, wie sich das Zussammenziehen Ihrer Muskeln und Bewegen Ihrer Gelenke anfühlt)
 
 Bitte versuchen Sie immer, sich auf BEIDE ASPEKTE GLEICHZEITIG zu konzentrieren, auch wenn sich dies nicht natürlich anfühlt. Falls Ihnen dies schwergefallen ist, haben Sie nach der Aufgabe die Möglichkeit, Ihre Erfahrung zu erläutern."
-right,images/seq_right.png,0.5,0.4,-0.3,"For the task you will use the four fingers of your dominant hand.
+right,ifst_images/seq_right.png,0.5,0.4,-0.3,"For the task you will use the four fingers of your dominant hand.
 
 Please place your right hand on the keyboard with your fingers on the buttons shown:
 
@@ -86,7 +86,7 @@ H = Ringfinger
 J = Kleiner Finger
 
 Bitte halten Sie während der gesamten Aufgabe Ihre Hand in dieser Position."
-left,images/seq_left.png,0.5,0.4,-0.3,"For the task you will use the four fingers of your dominant hand.
+left,ifst_images/seq_left.png,0.5,0.4,-0.3,"For the task you will use the four fingers of your dominant hand.
 
 Please place your left hand on the keyboard with your fingers on the buttons shown:
 
@@ -123,7 +123,7 @@ G = Ringfinger
 F = Kleiner Finger
 
 Bitte halten Sie während der gesamten Aufgabe Ihre Hand in dieser Position."
-right,images/seq_simple_right.png,0.5,0.4,-0.3,"This is an example sequence. DO NOT practice the sequence at this stage.
+right,ifst_images/seq_simple_right.png,0.5,0.4,-0.3,"This is an example sequence. DO NOT practice the sequence at this stage.
 
 In the image, you can see that each black dot corresponds to a key press. The black line indicates what should be next key press.
 
@@ -148,7 +148,7 @@ Im Bild können Sie sehen, dass jeder schwarze Punkt einem Tastendruck entspricht
 Im Fall dieser Sequenz wäre die korrekte Reihenfolge:
 
 Zeigefinger-Mittelfinger-Ringfinger-Kleiner Finger-Kleiner Finger-Ringfinger-Mittelfinger-Zeigefinger"
-left,images/seq_simple_left.png,0.5,0.4,-0.3,"This is an example sequence. DO NOT practice the sequence at this stage.
+left,ifst_images/seq_simple_left.png,0.5,0.4,-0.3,"This is an example sequence. DO NOT practice the sequence at this stage.
 
 In the image, you can see that each black dot corresponds to a key press. The black line indicates what should be next key press.
 
@@ -173,7 +173,7 @@ Im Bild können Sie sehen, dass jeder schwarze Punkt einem Tastendruck entspricht
 Im Fall dieser Sequenz wäre die korrekte Reihenfolge:
 
 Zeigefinger-Mittelfinger-Ringfinger-Kleiner Finger-Kleiner Finger-Ringfinger-Mittelfinger-Zeigefinger"
-right,images/seq_complex_right.png,0.5,0.4,-0.3,"This is another example of a sequence. DO NOT practice the sequence at this stage.
+right,ifst_images/seq_complex_right.png,0.5,0.4,-0.3,"This is another example of a sequence. DO NOT practice the sequence at this stage.
 
 Here the correct order would be:
 
@@ -190,7 +190,7 @@ Index-Petit-Majeur-Annulaire-Annulaire-Majeur-Petit-Index","Dies ist ein weitere
 Hier wäre die korrekte Reihenfolge:
 
 Zeigefinger-Kleiner Finger-Mittelfinger-Ringfinger-Ringfinger-Mittelfinger-Kleiner Finger-Zeigefinger"
-left,images/seq_complex_left.png,0.5,0.4,-0.3,"This is another example of a sequence. DO NOT practice the sequence at this stage.
+left,ifst_images/seq_complex_left.png,0.5,0.4,-0.3,"This is another example of a sequence. DO NOT practice the sequence at this stage.
 
 Here the correct order would be:
 
@@ -207,7 +207,7 @@ Index-Petit-Majeur-Annulaire-Annulaire-Majeur-Petit-Index","Dies ist ein weitere
 Hier wäre die korrekte Reihenfolge:
 
 Zeigefinger-Kleiner Finger-Mittelfinger-Ringfinger-Ringfinger-Mittelfinger-Kleiner Finger-Zeigefinger"
-right,images/seq_execution_right.png,0.6,0.5,-0.3,"When you are PHYSICALLY executing the sequence, you will have to press all the keys to finish the trial.
+right,ifst_images/seq_execution_right.png,0.6,0.5,-0.3,"When you are PHYSICALLY executing the sequence, you will have to press all the keys to finish the trial.
 
 You will see these images in this case.","Cuando estés ejecutando FÍSICAMENTE la secuencia, tendrás que pulsar todas las teclas para terminar ese intento.
 
@@ -216,7 +216,7 @@ En este caso, verás estas imágenes.","Lorsque vous exécutez PHYSIQUEMENT la séqu
 Dans ce cas, vous verrez ces images.","Wenn Sie die Sequenz PHYSISCH AUSFÜHREN, müssen Sie alle Tasten drücken, um den Durchgang zu beenden.
 
 Sie sehen in diesem Fall diese Bilder."
-left,images/seq_execution_left.png,0.6,0.5,-0.3,"When you are PHYSICALLY executing the sequence, you will have to press all the keys to finish the trial.
+left,ifst_images/seq_execution_left.png,0.6,0.5,-0.3,"When you are PHYSICALLY executing the sequence, you will have to press all the keys to finish the trial.
 
 You will see these images in this case.","Cuando estés ejecutando FÍSICAMENTE la secuencia, tendrás que pulsar todas las teclas para terminar ese intento.
 
@@ -225,7 +225,7 @@ En este caso, verás estas imágenes.","Lorsque vous exécutez PHYSIQUEMENT la séqu
 Dans ce cas, vous verrez ces images.","Wenn Sie die Sequenz PHYSISCH AUSFÜHREN, müssen Sie alle Tasten drücken, um den Durchgang zu beenden.
 
 Sie sehen in diesem Fall diese Bilder."
-right,images/seq_imagery_right.png,0.6,0.5,-0.3,"When you are IMAGINING the sequence, press ONLY the FIRST key of the sequence, IMAGINE the following movements, and press the LAST key again.
+right,ifst_images/seq_imagery_right.png,0.6,0.5,-0.3,"When you are IMAGINING the sequence, press ONLY the FIRST key of the sequence, IMAGINE the following movements, and press the LAST key again.
 
 In the example shown, you would:
 Physically press with the index.
@@ -254,7 +254,7 @@ Sich das Drücken mit den übrigen Fingern vorstellen.
 Physisch erneut mit dem Zeigefinger drücken.
 
 Wenn Sie sich die Bewegungen vorstellen, BEWEGEN Sie Ihre Hand NICHT, halten Sie sie ruhig über den angegebenen Tasten."
-left,images/seq_imagery_left.png,0.6,0.5,-0.3,"When you are IMAGINING the sequence, press ONLY the FIRST key of the sequence, IMAGINE the following movements, and press the LAST key again.
+left,ifst_images/seq_imagery_left.png,0.6,0.5,-0.3,"When you are IMAGINING the sequence, press ONLY the FIRST key of the sequence, IMAGINE the following movements, and press the LAST key again.
 
 In the example shown, you would:
 Physically press with the index.
@@ -283,7 +283,7 @@ Sich das Drücken mit den übrigen Fingern vorstellen.
 Physisch erneut mit dem Zeigefinger drücken.
 
 Wenn Sie sich die Bewegungen vorstellen, BEWEGEN Sie Ihre Hand NICHT, halten Sie sie ruhig über den angegebenen Tasten."
-right,images/seq_right.png,0,0,0,"The goal of the task is to complete the sequence as QUICKLY and ACCURATELY as you can, in both execution and imagery.
+right,ifst_images/seq_right.png,0,0,0,"The goal of the task is to complete the sequence as QUICKLY and ACCURATELY as you can, in both execution and imagery.
 
 However, we ask you to PRIORITISE ACCURACY over speed. That is, try to complete the task as quickly as you can, while ensuring you  complete the sequence correctly.
 
