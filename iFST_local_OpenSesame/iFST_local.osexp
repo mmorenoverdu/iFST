@@ -203,11 +203,11 @@ define inline_script exp_settings_script
 	import openpyxl, os
 	
 	# --- Global experiment parameters ---
-	var.n_reps           = 1     # repetitions of the conditions file per task block
+	var.n_reps           = 10     # repetitions of the conditions file per task block
 	var.practice_blocks  = 1     # number of practice blocks
 	var.task_blocks      = 2     # number of task blocks
 	var.total_blocks     = 3     # total blocks (practice + task)
-	var.target_per_stim  = 1     # correct trials needed per stimulus to pass practice
+	var.target_per_stim  = 2     # correct trials needed per stimulus to pass practice
 	var.block_number     = 0     # incremented to 1 on first block_start_script call
 	var.lang_code        = 'EN'  # default language; overwritten by lang_select_script
 	var.handedness       = 'right'
