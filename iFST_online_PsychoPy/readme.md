@@ -180,12 +180,9 @@ Most parameters are **not** in the startup dialog — they are set in the `exper
 
 ### Counterbalancing
 
-Sequence type assignment across task blocks is counterbalanced automatically from the participant ID:
+When working locally, just enable the counterbalance routine. This routine will handle the counterbalancing.
 
-| Participant ID parity | Block 2 | Block 3 |
-| :--- | :--- | :--- |
-| Even | Simple sequence | Complex sequence |
-| Odd  | Complex sequence | Simple sequence |
+When working online, the random_order code component in exp_settings will randomly assign the participant to a given order.
 
 ### Handedness
 
