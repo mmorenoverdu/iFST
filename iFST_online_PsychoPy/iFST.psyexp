@@ -14,7 +14,7 @@
     <Param val="" valType="str" updates="None" name="HTML path"/>
     <Param val="" valType="str" updates="None" name="Incomplete URL"/>
     <Param val="testMonitor" valType="str" updates="None" name="Monitor"/>
-    <Param val="['ifst_files/conditions_left.xlsx', 'ifst_files/conditions_right.xlsx', 'ifst_files/instructions.xlsx', 'ifst_files/self_assess_questions.xlsx', 'stimuli/correct_sound.wav', 'stimuli/incorrect_sound.wav', 'images/seq_complex_left.png', 'images/seq_complex_right.png', 'images/seq_execution_left.png', 'images/seq_execution_right.png', 'images/seq_imagery_left.png', 'images/seq_imagery_right.png', 'images/seq_left.png', 'images/seq_right.png', 'images/seq_simple_left.png', 'images/seq_simple_right.png', 'stimuli/complex_execution_left.png', 'stimuli/complex_execution_right.png', 'stimuli/complex_imagery_left.png', 'stimuli/complex_imagery_right.png', 'stimuli/simple_execution_left.png', 'stimuli/simple_execution_right.png', 'stimuli/simple_imagery_left.png', 'stimuli/simple_imagery_right.png']" valType="list" updates="None" name="Resources"/>
+    <Param val="['ifst_stimuli/complex_execution_left.png', 'ifst_stimuli/complex_execution_right.png', 'ifst_stimuli/complex_imagery_left.png', 'ifst_stimuli/complex_imagery_right.png', 'ifst_stimuli/correct_sound.wav', 'ifst_stimuli/incorrect_sound.wav', 'ifst_stimuli/simple_execution_left.png', 'ifst_stimuli/simple_execution_right.png', 'ifst_stimuli/simple_imagery_left.png', 'ifst_stimuli/simple_imagery_right.png', 'ifst_images/seq_complex_left.png', 'ifst_images/seq_complex_right.png', 'ifst_images/seq_execution_left.png', 'ifst_images/seq_execution_right.png', 'ifst_images/seq_imagery_left.png', 'ifst_images/seq_imagery_right.png', 'ifst_images/seq_left.png', 'ifst_images/seq_right.png', 'ifst_images/seq_simple_left.png', 'ifst_images/seq_simple_right.png', 'ifst_files/conditions_left.xlsx', 'ifst_files/conditions_right.xlsx', 'ifst_files/instructions.xlsx', 'ifst_files/self_assess_questions.xlsx']" valType="list" updates="None" name="Resources"/>
     <Param val="False" valType="bool" updates="None" name="Save csv file"/>
     <Param val="False" valType="bool" updates="None" name="Save excel file"/>
     <Param val="False" valType="bool" updates="None" name="Save hdf5 file"/>
@@ -171,7 +171,7 @@
         <Param val="$inst_msg" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="None" name="validator"/>
-        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+        <Param val="0.8" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="advance_text" plugin="None">
         <Param val="-1.0000, -1.0000, -1.0000" valType="color" updates="constant" name="color"/>
@@ -655,11 +655,11 @@
       <CodeComponent name="exp_settings_code" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="# block settings&amp;#10;n_stimuli = 4 # exe-ima and simple-complex sequences&amp;#10;# n_stimuli is not really used&amp;#10;practice_blocks = 1 # number of practice blocks&amp;#10;feedback = True # variable for settings in practice/test blocks&amp;#10;# parameters for criterion in practice block&amp;#10;stim_counters = {1: 0, 2: 0, 3: 0, 4: 0} # counters&amp;#10;# the number of counter should match with the number of stimuli&amp;#10;target_per_stim = 2 # whatever criterion&amp;#10;task_blocks = 2 # number of task blocks&amp;#10;total_blocks = practice_blocks + task_blocks&amp;#10;##### IMPORTANT VARIABLE #######&amp;#10;n_reps = 1  # repetitions per task block&amp;#10;################################&amp;#10;# placeholder variables:&amp;#10;reps_per_block = 1 # variable to control reps in a block&amp;#10;block_number = 0 # initialize variable for output&amp;#10;color_text = &quot;&quot; # initialize variable&amp;#10;self_assess_show = 0 # variable to show self-assessment loop&amp;#10;sequence = &quot;simple&quot; # placeholder, it's updated later&amp;#10;# settings for max/min time of breaks between blocks&amp;#10;reg_max_pause = 60 # maximum time in seconds&amp;#10;min_pause = 0 # minimum time in seconds&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="n_stimuli = 4;&amp;#10;practice_blocks = 1;&amp;#10;feedback = true;&amp;#10;stim_counters = {[1]: 0, [2]: 0, [3]: 0, [4]: 0};&amp;#10;target_per_stim = 2;&amp;#10;task_blocks = 2;&amp;#10;total_blocks = (practice_blocks + task_blocks);&amp;#10;n_reps = 1;&amp;#10;reps_per_block = 1;&amp;#10;block_number = 0;&amp;#10;color_text = &quot;&quot;;&amp;#10;self_assess_show = 0;&amp;#10;sequence = &quot;simple&quot;;&amp;#10;reg_max_pause = 60;&amp;#10;min_pause = 0;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="group = Number.parseInt(counterbalance.group);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="### CODE DOES NOT AUTOTRANSLATE ###&amp;#10;&amp;#10;# block settings&amp;#10;n_stimuli = 4 # exe-ima and simple-complex sequences&amp;#10;# n_stimuli is not really used&amp;#10;practice_blocks = 1 # number of practice blocks&amp;#10;feedback = True # variable for settings in practice/test blocks&amp;#10;# parameters for criterion in practice block&amp;#10;stim_counters = {1: 0, 2: 0, 3: 0, 4: 0} # counters&amp;#10;# the number of counter should match with the number of stimuli&amp;#10;target_per_stim = 2 # whatever criterion&amp;#10;task_blocks = 2 # number of task blocks&amp;#10;total_blocks = practice_blocks + task_blocks&amp;#10;##### IMPORTANT VARIABLE #######&amp;#10;n_reps = 10  # repetitions per task block&amp;#10;################################&amp;#10;# placeholder variables:&amp;#10;reps_per_block = 1 # variable to control reps in a block&amp;#10;block_number = 0 # initialize variable for output&amp;#10;color_text = &quot;&quot; # initialize variable&amp;#10;self_assess_show = 0 # variable to show self-assessment loop&amp;#10;sequence = &quot;simple&quot; # placeholder, it's updated later&amp;#10;# settings for max/min time of breaks between blocks&amp;#10;reg_max_pause = 60 # maximum time in seconds&amp;#10;min_pause = 0 # minimum time in seconds&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="n_stimuli = 4;&amp;#10;practice_blocks = 1;&amp;#10;feedback = true;&amp;#10;stim_counters = {[1]: 0, [2]: 0, [3]: 0, [4]: 0};&amp;#10;target_per_stim = 2;&amp;#10;task_blocks = 2;&amp;#10;total_blocks = (practice_blocks + task_blocks);&amp;#10;n_reps = 10;&amp;#10;reps_per_block = 1;&amp;#10;block_number = 0;&amp;#10;color_text = &quot;&quot;;&amp;#10;self_assess_show = 0;&amp;#10;sequence = &quot;simple&quot;;&amp;#10;reg_max_pause = 60;&amp;#10;min_pause = 0;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="// group = Number.parseInt(counterbalance.group);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="group = int(counterbalance.group)&amp;#10;# we use this variable to counterbalance the conditions&amp;#10;# see code in the block_start routine.&amp;#10;# The orders are:&amp;#10;# group == 0: simple-complex&amp;#10;# group == 1: complex-simple" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="Both" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
@@ -683,8 +683,25 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="None" name="disabled"/>
         <Param val="sound_device_code" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <CodeComponent name="random_order_code" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="group = Math.random() &lt; 0.5 ? 0 : 1;&amp;#10;// we use this variable to counterbalance the conditions&amp;#10;// see code in the block_start routine.&amp;#10;// The orders are:&amp;#10;// group == 0: simple-complex&amp;#10;// group == 1: complex-simp" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="random_order_code" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
     <Routine name="block_start">
@@ -709,7 +726,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="psychoJS.window.mouseVisible = false;&amp;#10;block_number += 1;&amp;#10;screen_timer = new util.Clock();&amp;#10;if ((block_number === 1)) {&amp;#10;    block_message = block_first_msg;&amp;#10;} else {&amp;#10;    if ((block_number === (practice_blocks + 1))) {&amp;#10;        block_message = block_intro_task_msg;&amp;#10;    } else {&amp;#10;        block_message = block_msg_standard;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="document.body.style.cursor = 'none';&amp;#10;block_number += 1;&amp;#10;screen_timer = new util.Clock();&amp;#10;if ((block_number === 1)) {&amp;#10;    block_message = block_first_msg;&amp;#10;} else {&amp;#10;    if ((block_number === (practice_blocks + 1))) {&amp;#10;        block_message = block_intro_task_msg;&amp;#10;    } else {&amp;#10;        block_message = block_msg_standard;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="# DOES NOT AUTO-TRANSLATE!!!&amp;#10;&amp;#10;win.mouseVisible = False&amp;#10;# start block at 1 and increase every iteration&amp;#10;block_number += 1&amp;#10;# initialize timer&amp;#10;screen_timer = core.Clock()&amp;#10;# set up block messages according to task progress&amp;#10;# and minimum time for pauses&amp;#10;if block_number == 1:&amp;#10;    # practice block&amp;#10;    block_message = block_first_msg&amp;#10;elif block_number == practice_blocks + 1:&amp;#10;    # first task block&amp;#10;    block_message = block_intro_task_msg&amp;#10;else:&amp;#10;    # after block&amp;#10;    block_message = block_msg_standard" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Both" valType="str" updates="None" name="Code Type"/>
         <Param val="# show timer&amp;#10;elapsed = screen_timer.getTime()&amp;#10;minutes = int(elapsed // 60)&amp;#10;seconds = int(elapsed % 60)&amp;#10;timer_text = f&quot;{minutes:02d}:{seconds:02d}&quot;&amp;#10;&amp;#10;# stop routine when we reach the maximum time&amp;#10;if seconds &gt;= reg_max_pause:&amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Each Frame"/>
@@ -1516,19 +1533,6 @@
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
-    <CounterbalanceRoutine name="counterbalance">
-      <Param name="conditionsFile" updates="None" val="" valType="file"/>
-      <Param name="conditionsVariable" updates="None" val="" valType="code"/>
-      <Param name="disabled" updates="None" val="False" valType="bool"/>
-      <Param name="endExperimentOnDepletion" updates="None" val="True" valType="code"/>
-      <Param name="nGroups" updates="None" val="2" valType="code"/>
-      <Param name="nReps" updates="None" val="100" valType="code"/>
-      <Param name="nSlots" updates="None" val="1" valType="code"/>
-      <Param name="name" updates="None" val="counterbalance" valType="code"/>
-      <Param name="saveData" updates="None" val="True" valType="bool"/>
-      <Param name="saveRemaining" updates="None" val="True" valType="bool"/>
-      <Param name="specMode" updates="None" val="uniform" valType="str"/>
-    </CounterbalanceRoutine>
     <Routine name="self_assess">
       <RoutineSettingsComponent name="self_assess" plugin="None">
         <Param val="none" valType="str" updates="None" name="backgroundFit"/>
@@ -1551,7 +1555,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="self_assess_question = &quot;&quot;&amp;#10;label_min = &quot;&quot;&amp;#10;label_middle = &quot;&quot;&amp;#10;label_max = &quot;&quot;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="self_assess_question = &quot;&quot;;&amp;#10;label_min = &quot;&quot;;&amp;#10;label_middle = &quot;&quot;;&amp;#10;label_max = &quot;&quot;;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="psychoJS.window.mouseVisible = true;&amp;#10;try {&amp;#10;    self_assess_question = eval(`self_assess_question_${lang_code}`);&amp;#10;    label_min = eval(`label_min_${lang_code}`);&amp;#10;    label_middle = eval(`label_middle_${lang_code}`);&amp;#10;    label_max = eval(`label_max_${lang_code}`);&amp;#10;} catch(e) {&amp;#10;    if ((e instanceof ReferenceError)) {&amp;#10;        self_assess_question = self_assess_question_EN;&amp;#10;        label_min = label_min_EN;&amp;#10;        label_middle = label_middle_EN;&amp;#10;        label_max = label_max_EN;&amp;#10;    } else {&amp;#10;        throw e;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="document.body.style.cursor = 'default';&amp;#10;try {&amp;#10;    self_assess_question = eval(`self_assess_question_${lang_code}`);&amp;#10;    label_min = eval(`label_min_${lang_code}`);&amp;#10;    label_middle = eval(`label_middle_${lang_code}`);&amp;#10;    label_max = eval(`label_max_${lang_code}`);&amp;#10;} catch(e) {&amp;#10;    if ((e instanceof ReferenceError)) {&amp;#10;        self_assess_question = self_assess_question_EN;&amp;#10;        label_min = label_min_EN;&amp;#10;        label_middle = label_middle_EN;&amp;#10;        label_max = label_max_EN;&amp;#10;    } else {&amp;#10;        throw e;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="win.mouseVisible = True&amp;#10;# fetch language localisation from excel sheet&amp;#10;try:&amp;#10;    self_assess_question = eval(f&quot;self_assess_question_{lang_code}&quot;)&amp;#10;    label_min = eval(f&quot;label_min_{lang_code}&quot;)&amp;#10;    label_middle = eval(f&quot;label_middle_{lang_code}&quot;)&amp;#10;    label_max = eval(f&quot;label_max_{lang_code}&quot;)&amp;#10;except ReferenceError:&amp;#10;    self_assess_question = self_assess_question_EN&amp;#10;    label_min = label_min_EN&amp;#10;    label_middle = label_middle_EN&amp;#10;    label_max = label_max_EN" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Both" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
@@ -2634,7 +2638,7 @@
         <Param val="Arial" valType="str" updates="constant" name="font"/>
         <Param val="False" valType="bool" updates="constant" name="italic"/>
         <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
-        <Param val="0.03" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="0.022" valType="num" updates="constant" name="letterHeight"/>
         <Param val="0.8" valType="num" updates="constant" name="lineSpacing"/>
         <Param val="label_prefer_not_say" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
@@ -2846,43 +2850,96 @@
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="None" name="validator"/>
       </TextboxComponent>
-      <ButtonComponent name="next_button" plugin="None">
+      <PolygonComponent name="next_poly_2" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
-        <Param val="True" valType="bool" updates="constant" name="bold"/>
-        <Param val="None" valType="color" updates="constant" name="borderColor"/>
-        <Param val="0" valType="num" updates="constant" name="borderWidth"/>
-        <Param val="" valType="extendedCode" updates="constant" name="callback"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="0.6078, -0.2784, -0.2784" valType="color" updates="constant" name="fillColor"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="0.6078, -0.2784, -0.2784" valType="color" updates="constant" name="lineColor"/>
+        <Param val="1" valType="num" updates="constant" name="lineWidth"/>
+        <Param val="4" valType="int" updates="constant" name="nVertices"/>
+        <Param val="next_poly_2" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0.7, -0.35)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="rectangle" valType="str" updates="None" name="shape"/>
+        <Param val="(0.2, 0.1)" valType="list" updates="constant" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="list" updates="constant" name="vertices"/>
+      </PolygonComponent>
+      <TextComponent name="next_text_2" plugin="None">
         <Param val="-1.0000, -1.0000, -1.0000" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="0.6078, -0.2784, -0.2784" valType="color" updates="constant" name="fillColor"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
-        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
-        <Param val="False" valType="bool" updates="constant" name="italic"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
         <Param val="0.035" valType="num" updates="constant" name="letterHeight"/>
-        <Param val="next_button" valType="code" updates="None" name="name"/>
-        <Param val="True" valType="bool" updates="constant" name="oncePerClick"/>
+        <Param val="next_text_2" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="" valType="num" updates="constant" name="padding"/>
         <Param val="(0.7, -0.35)" valType="list" updates="constant" name="pos"/>
-        <Param val="first click" valType="str" updates="None" name="save"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="(0.2, 0.1)" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0" valType="code" updates="None" name="startVal"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$next_msg" valType="str" updates="set every repeat" name="text"/>
-        <Param val="button onset" valType="str" updates="constant" name="timeRelativeTo"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="None" name="validator"/>
-      </ButtonComponent>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <MouseComponent name="mouse_demo" plugin="None">
+        <Param val="next_poly_2" valType="list" updates="constant" name="clickable"/>
+        <Param val="" valType="list" updates="constant" name="correctAns"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="valid click" valType="str" updates="constant" name="forceEndRoutineOnPress"/>
+        <Param val="mouse_demo" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="constant" name="newClicksOnly"/>
+        <Param val="on valid click" valType="str" updates="None" name="saveMouseState"/>
+        <Param val="name," valType="list" updates="constant" name="saveParamsClickable"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="False" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="mouse onset" valType="str" updates="constant" name="timeRelativeTo"/>
+      </MouseComponent>
     </Routine>
+    <CounterbalanceRoutine name="counterbalance">
+      <Param name="conditionsFile" updates="None" val="" valType="file"/>
+      <Param name="conditionsVariable" updates="None" val="" valType="code"/>
+      <Param name="disabled" updates="None" val="True" valType="bool"/>
+      <Param name="endExperimentOnDepletion" updates="None" val="True" valType="code"/>
+      <Param name="nGroups" updates="None" val="2" valType="code"/>
+      <Param name="nReps" updates="None" val="100" valType="code"/>
+      <Param name="nSlots" updates="None" val="1" valType="code"/>
+      <Param name="name" updates="None" val="counterbalance" valType="code"/>
+      <Param name="saveData" updates="None" val="True" valType="bool"/>
+      <Param name="saveRemaining" updates="None" val="True" valType="bool"/>
+      <Param name="specMode" updates="None" val="uniform" valType="str"/>
+    </CounterbalanceRoutine>
   </Routines>
   <Flow>
     <CounterbalanceRoutine name="counterbalance"/>
