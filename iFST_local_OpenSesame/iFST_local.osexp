@@ -17,7 +17,7 @@ set round_decimals 2
 set mouse_backend psycho
 set keyboard_backend psycho
 set height 768
-set fullscreen no
+set fullscreen yes
 set form_clicks no
 set foreground black
 set font_underline no

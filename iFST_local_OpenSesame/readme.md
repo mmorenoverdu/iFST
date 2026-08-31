@@ -28,6 +28,8 @@ If you are unfamiliar with OpenSesame, refer to the [documentation](https://osdo
 5. The output `.csv` file is generated automatically in the experiment folder as `subject-<subject_nr>.csv` (e.g., `subject-1.csv`). Do not rename it.
 6. **Process the data** using the provided R or Python script.
 
+> **⚠️ Full-screen on a new computer:** Every click on **Run** (not Quick Run) opens an "Experiment Settings" dialog (subject number, logfile, **Fullscreen** checkbox) *before* the experiment starts. This checkbox — not the experiment's own `fullscreen` setting in General Properties — is what actually decides whether the window is full-screen, and OpenSesame remembers its state **per computer**. On a computer where it has never been ticked (e.g. a colleague's fresh install), the experiment will run in a window even though it ran full-screen for you. **The fix:** tick **Fullscreen** in that dialog once on each new computer — OpenSesame will then default to full-screen automatically on every subsequent Run on that machine.
+
 > **⚠️ Cloud sync:** If the experiment folder is inside a cloud-synced location (e.g., OneDrive), **pause synchronisation before running**. Active syncing can corrupt the `.csv` file while OpenSesame writes to it.
 
 > **⚠️ File paths:** Do not rename or move any files or subfolders. The experiment locates all resources by relative path from the experiment folder.
@@ -191,10 +193,7 @@ var.lang_code       = 'ES' # default to Spanish
 
 ### Testing without full-screen
 
-1. Go to **Tools → General Properties**.
-2. Uncheck **Full-screen mode** and save.
-
-Re-enable full-screen before data collection.
+Toggling **Full-screen mode** in **Tools → General Properties** does *not* control this in OpenSesame 4.1.9 — that value is overridden every time by the **Fullscreen** checkbox in the "Experiment Settings" dialog that appears on Run (see the full-screen note under [Setup Instructions](#setup-instructions)). To test windowed, simply **untick Fullscreen in that dialog** when you click Run; tick it again before data collection. The checkbox state is remembered per computer, so this only needs doing once each way.
 
 ---------------------------------------
 
